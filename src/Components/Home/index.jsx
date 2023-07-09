@@ -1,10 +1,15 @@
-import React from 'react';
-import homeVid from '../../assets/homevid.mp4';
+import background from '../../assets/homevid.mp4';
+import './style.css';
 
-const index = () => {
+const Home = (props) => {
   return (
-    <div>index</div>
+    <div>
+    <div className="main panel">
+        <video src={background} autoPlay muted  loop/>
+        <div className="overlay"></div>
+        {/* <HomeBody /> */}
+        </div>
+    </div>
   )
 }
-
-export default index
+export default Home;
