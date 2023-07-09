@@ -41,7 +41,7 @@
 
   .menu__item {
     position: relative;
-    padding: 0 6vw;
+    padding: 0 4vw;
   }
   
   .menu__item-link {
@@ -88,7 +88,7 @@
     --offset: 20vw;
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
-    font-size: 7vw;
+    font-size: 5vw;
   }
   
   .marquee {
@@ -121,8 +121,8 @@
   .menu__item-link,
   .marquee span {
     white-space: nowrap;
-    font-size: 7vw;
-    padding: 0 1vw;
+    font-size: 5vw;
+    padding: 0 0.5vw;
     line-height: 1.15;
   }
   

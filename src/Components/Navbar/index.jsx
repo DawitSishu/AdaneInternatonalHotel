@@ -78,9 +78,9 @@ const NavBar = () => {
       </div>
       <div className="menu">
         <div className="menu__item">
-          <h3 className="menu__item-link" style={{ color: "white" }}>
+          <h5 className="menu__item-link" style={{ color: "white" }}>
             Home
-          </h3>
+          </h5>
           <img className="menu__item-img" src={homeImg} />
           <div className="marquee">
             <div className="marquee__inner">
@@ -89,9 +89,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="menu__item">
-          <h3 className="menu__item-link" style={{ color: "white" }}>
+          <h5 className="menu__item-link" style={{ color: "white" }}>
             The Hotel
-          </h3>
+          </h5>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
@@ -103,9 +103,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="menu__item">
-          <h3 className="menu__item-link" style={{ color: "white" }}>
+          <h5 className="menu__item-link" style={{ color: "white" }}>
             Gallery
-          </h3>
+          </h5>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
@@ -117,9 +117,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="menu__item">
-          <h3 className="menu__item-link" style={{ color: "white" }}>
+          <h5 className="menu__item-link" style={{ color: "white" }}>
             Services
-          </h3>
+          </h5>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
@@ -131,9 +131,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="menu__item">
-          <h3 className="menu__item-link" style={{ color: "white" }}>
+          <h5 className="menu__item-link" style={{ color: "white" }}>
             Special Offers
-          </h3>
+          </h5>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
@@ -145,9 +145,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="menu__item">
-          <h3 className="menu__item-link" style={{ color: "white" }}>
+          <h5 className="menu__item-link" style={{ color: "white" }}>
             Contact
-          </h3>
+          </h5>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
