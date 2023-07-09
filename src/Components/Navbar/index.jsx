@@ -21,8 +21,8 @@ const NavBar = () => {
     tl.current.to(
       ".line1",
       {
-        y: 9,
-        rotate: "45",
+        y: 16,
+        rotate: "40",
         duration: 0.5,
         width: "100%",
       },
@@ -31,7 +31,7 @@ const NavBar = () => {
     tl.current.to(
       ".line2",
       {
-        y: -9,
+        y: -12,
         rotate: "-45",
         duration: 0.5,
       },
@@ -90,6 +90,20 @@ const NavBar = () => {
         </div>
         <div className="menu__item">
           <h3 className="menu__item-link" style={{ color: "white" }}>
+            The Hotel
+          </h3>
+          <img className="menu__item-img" src={bg} />
+          <div className="marquee">
+            <div className="marquee__inner">
+              <span>
+                The Hotel - The Hotel - The Hotel - The Hotel - The Hotel - The Hotel -
+                The Hotel
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="menu__item">
+          <h3 className="menu__item-link" style={{ color: "white" }}>
             Gallery
           </h3>
           <img className="menu__item-img" src={bg} />
@@ -104,31 +118,46 @@ const NavBar = () => {
         </div>
         <div className="menu__item">
           <h3 className="menu__item-link" style={{ color: "white" }}>
-            Reserve
+            Services
           </h3>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
-                Reserve - Reserve - Reserve - Reserve - Reserve - Reserve -
-                Reserve
+                Services - Services - Services - Services - Services - Services -
+                Services
               </span>
             </div>
           </div>
         </div>
         <div className="menu__item">
           <h3 className="menu__item-link" style={{ color: "white" }}>
-            Log-In
+            Special Offers
           </h3>
           <img className="menu__item-img" src={bg} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
-                Log-In - Log-In - Log-In - Log-In - Log-In - Log-In - Log-In
+                Special Offers - Special Offers - Special Offers - Special Offers - Special Offers - Special Offers -
+                Special Offers
               </span>
             </div>
           </div>
         </div>
+        <div className="menu__item">
+          <h3 className="menu__item-link" style={{ color: "white" }}>
+            Contact
+          </h3>
+          <img className="menu__item-img" src={bg} />
+          <div className="marquee">
+            <div className="marquee__inner">
+              <span>
+                Contact - Contact - Contact - Contact - Contact - Contact - Contact
+              </span>
+            </div>
+          </div>
+        </div>
+        <br/>
       </div>
     </>
   );
