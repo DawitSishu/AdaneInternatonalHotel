@@ -1,14 +1,16 @@
 import './App.css';
 import NavBar from './Components/Navbar';
 import Home from './Components/Home';
+import Loader from './Components/Loader';
 
 function App() {
 
   return (
-    <>
-      <NavBar />
-      <Home />
-    </>
+    <div >
+      <Loader />
+      {/* <NavBar />
+      <Home /> */}
+    </div>
   )
 }
 
