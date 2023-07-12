@@ -6,8 +6,10 @@ import Loader from './Components/Loader';
 function App() {
 
   return (
-    <div >
-        <Home />
+    <div style={{height:'100vh'}} >
+        {/* <Home /> */}
+        {/* <Loader /> */}
+        <NavBar />
     </div>
   )
 }

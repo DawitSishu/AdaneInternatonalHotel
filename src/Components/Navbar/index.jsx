@@ -1,6 +1,6 @@
 import "./style.css";
-import homeImg from "../../assets/react.svg";
-import bg from "../../assets/react.svg";
+import homeImg from "../../assets/o.png";
+import bg from "../../assets/o.png";
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
