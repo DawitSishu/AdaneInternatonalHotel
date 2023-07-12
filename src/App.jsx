@@ -2,14 +2,16 @@ import './App.css';
 import NavBar from './Components/Navbar';
 import Home from './Components/Home';
 import Loader from './Components/Loader';
+import About from './Components/About';
 
 function App() {
 
   return (
-    <div style={{height:'100vh'}} >
+    <div >
         {/* <Home /> */}
         {/* <Loader /> */}
-        <NavBar />
+        {/* <NavBar /> */}
+        <About />
     </div>
   )
 }
