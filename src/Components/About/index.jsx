@@ -8,6 +8,7 @@ import "react-html5video/dist/styles.css";
 import vid from "../../assets/ff.mp4";
 import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
+import Footer from '../Footer';
 
 const index = () => {
   const tl = useRef();
@@ -185,7 +186,6 @@ const index = () => {
         ) : null}
         {isOpen ? (
           <div className="popup-overlay">
-            {/* <div className="popup-content"> */}
             <div className="close-icon" onClick={handleClosePopup}>
               <FaTimes />
             </div>
@@ -198,12 +198,10 @@ const index = () => {
             >
               <source src={vid} type="video/mp4" />
             </Video>
-
-            {/* <button onClick={handleClosePopup}>Close</button> */}
-            {/* </div> */}
           </div>
         ) : null}
       </div>
+      <Footer />
     </div>
   );
 };
