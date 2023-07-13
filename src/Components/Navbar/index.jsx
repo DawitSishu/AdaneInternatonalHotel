@@ -157,7 +157,6 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <br/>
       </div>
     </>
   );

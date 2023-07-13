@@ -1,8 +1,13 @@
-import { useEffect, useRef, Suspense } from "react";
+import { useEffect, useRef, Suspense,useState } from "react";
 import "./style.css";
 import { Grid, Typography } from "@mui/material";
 import { gsap } from "gsap";
 import Loader from "../Loader";
+import { DefaultPlayer as Video } from 'react-html5video';
+import 'react-html5video/dist/styles.css';
+import vid from "../../assets/ff.mp4";
+import thumbnail from "../../assets/o.png";
+import { FaTimes , FaPlay} from 'react-icons/fa';
 
 const index = () => {
   const tl = useRef();
@@ -49,13 +54,23 @@ const index = () => {
       },
       0
     );
-  });
+  },[]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenPopup = () => {
+    setIsOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsOpen(false);
+  };
+
 
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div style={{ overflowX: "hidden",overflowy:'auto', height:'100vh' }}>
       <Suspense fallback={<Loader />}>
-        <div class="images">
-          <div class="main-title">
+        <div className="images">
+          <div className="main-title">
             <h1>Welcome</h1>
             <br />
             <h1>To</h1>
@@ -151,6 +166,34 @@ const index = () => {
           </Grid>
         </div>
       </Suspense>
+      <div>
+      {!isOpen && (
+        <div className="play-image" >
+        <img src={thumbnail} alt="Play Video" />
+        <div className="play-button-overlay" onClick={handleOpenPopup}>
+          <FaPlay />
+        </div>
+      </div>
+      )}
+      {isOpen ? (
+        <div className="popup-overlay">
+          {/* <div className="popup-content"> */}
+          <div className="close-icon" onClick={handleClosePopup}>
+              <FaTimes />
+            </div>
+             <Video  autoPlay loop muted
+            controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+            poster={thumbnail}
+           >
+            <source src={vid} type="video/mp4" />
+            </Video>
+            
+            {/* <button onClick={handleClosePopup}>Close</button> */}
+          {/* </div> */}
+        </div>
+      ) : null}
+    </div>
+      
     </div>
   );
 };
