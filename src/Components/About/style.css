@@ -3,20 +3,11 @@
   font-family: 'cursive';
   src: url('../../assets/AnandaBlackPersonalUseRegular-rg9Rx.ttf');
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, sans-serif;
-   background-color: #212121;
-  }
 
 
   .images {
-    width: 100vw;
-    height: 60vh;
+    width: 100vdw;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -96,29 +87,26 @@
     align-items: center;
     color: white;
     font-family: 'cursive';
-    font-size: 35px;
+    font-size: 25px;
+    margin-top:2%;
   }
- 
-  .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media (max-width: 900px) {
+      .container{
+        display: none;
+      }
+      .images {
+        height:30vh
+      }
   }
-  
-  .logo-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
+
+  @media (max-width: 1050px) {
+    .main-title {
+      font-size: 18px; 
+    }
   }
-  .logo-img {
-    width: 50%;
-    height: 10%;
-  }
-  
-  .logo-content {
-        width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  @media (max-width: 400px) {
+    .main-title {
+      font-size: 15px; 
+    }
   }

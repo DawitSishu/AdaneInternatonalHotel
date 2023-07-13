@@ -1,16 +1,17 @@
+import './style.css';
+import { Grid, Paper, Typography } from '@mui/material';
 
-import './style.css'
 const index = () => {
    
   return (
     <>
     <div class="images">
-        <div class="main-title">
-          <h1>Adane</h1>
+        <div class="main-title" >
+          <h1>Welcome</h1>
           <br />
-          <h1>International</h1>
+          <h1>To</h1>
           <br />
-          <h1>Hotel</h1>
+          <h1>Our Hotel</h1>
           <br />
         </div>
       <div className="container">
@@ -42,18 +43,22 @@ const index = () => {
       </div>
     </div>
       </div>
-      <div class="about-content">
-        <div class="logo-card">
-          <div>
+      <div style={{ flexGrow: 1, margin: '16px' }}>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12} md={6} sx={{ display:'flex',justifyContent:'center', alignItems:'center'}} >
             <img
               src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
               alt="logp"
-              class="logo-img"
+              style={{ width: '40%', height:'80%' }}
             />
-          </div>
-        </div>
-        <div class="logo-content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit odio
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Grid sx={{ display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column' ,padding:5}}>
+            <Typography variant='h3' align="center">
+              Adane international hotel
+            </Typography>
+            <Typography variant="body1" align="center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit odio
           sint veniam recusandae commodi quasi voluptate? Repudiandae quo ipsam
           non perferendis. Eligendi at modi eaque error temporibus dolorem
           eveniet ipsa. Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -67,8 +72,11 @@ const index = () => {
           veniam recusandae commodi quasi voluptate? Repudiandae quo ipsam non
           perferendis. Eligendi at modi eaque error temporibus dolorem eveniet
           ipsa.
-        </div>
-      </div>
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+    </div>
       </>
   )
 }
