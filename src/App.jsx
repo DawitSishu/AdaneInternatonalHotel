@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './App.css';
 import NavBar from './Components/Navbar';
 import Home from './Components/Home';
@@ -6,13 +7,21 @@ import About from './Components/About';
 import Footer from './Components/Footer';
 
 function App() {
+  const [vidplaying,setVidPlaying] = useState(true);
+
+  const stopVideo = () => {
+    setVidPlaying(false);
+  }
 
   return (
     <div >
-        {/* <Home /> */}
+      {
+        vidplaying ?  <Home stop={stopVideo}/> : <About />
+      }
+        
         {/* <Loader /> */}
-        <NavBar />
-        <About />
+        {/* <NavBar />
+        <About /> */}
     </div>
   )
 }
