@@ -191,4 +191,8 @@
     height: 70%;
   }
   
-   
+  @media (max-width: 580px) {
+    .play-button-overlay {
+      font-size: 55px; 
+    }
+  }

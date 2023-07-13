@@ -1,13 +1,13 @@
-import { useEffect, useRef, Suspense,useState } from "react";
+import { useEffect, useRef, Suspense, useState } from "react";
 import "./style.css";
 import { Grid, Typography } from "@mui/material";
 import { gsap } from "gsap";
 import Loader from "../Loader";
-import { DefaultPlayer as Video } from 'react-html5video';
-import 'react-html5video/dist/styles.css';
+import { DefaultPlayer as Video } from "react-html5video";
+import "react-html5video/dist/styles.css";
 import vid from "../../assets/ff.mp4";
 import thumbnail from "../../assets/o.png";
-import { FaTimes , FaPlay} from 'react-icons/fa';
+import { FaTimes, FaPlay } from "react-icons/fa";
 
 const index = () => {
   const tl = useRef();
@@ -54,7 +54,7 @@ const index = () => {
       },
       0
     );
-  },[]);
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenPopup = () => {
@@ -65,9 +65,8 @@ const index = () => {
     setIsOpen(false);
   };
 
-
   return (
-    <div style={{ overflowX: "hidden",overflowy:'auto', height:'100vh' }}>
+    <div style={{ overflowX: "hidden", overflowy: "auto", height: "100vh" }}>
       <Suspense fallback={<Loader />}>
         <div className="images">
           <div className="main-title">
@@ -167,33 +166,44 @@ const index = () => {
         </div>
       </Suspense>
       <div>
-      {!isOpen && (
-        <div className="play-image" >
-        <img src={thumbnail} alt="Play Video" />
-        <div className="play-button-overlay" onClick={handleOpenPopup}>
-          <FaPlay />
-        </div>
-      </div>
-      )}
-      {isOpen ? (
-        <div className="popup-overlay">
-          {/* <div className="popup-content"> */}
-          <div className="close-icon" onClick={handleClosePopup}>
+        <Grid container justifyContent='center'>
+        <Typography
+                  variant="h3"
+                  align="center"
+                  className="about-text-title"
+                >
+                A Place, Where Comfort Meets Elegancy
+                </Typography>
+        </Grid>
+        {!isOpen ? (
+          <div className="play-image">
+            <img src={thumbnail} alt="Play Video" />
+            <div className="play-button-overlay" onClick={handleOpenPopup}>
+              <FaPlay />
+            </div>
+          </div>
+        ) : null}
+        {isOpen ? (
+          <div className="popup-overlay">
+            {/* <div className="popup-content"> */}
+            <div className="close-icon" onClick={handleClosePopup}>
               <FaTimes />
             </div>
-             <Video  autoPlay loop muted
-            controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
-            poster={thumbnail}
-           >
-            <source src={vid} type="video/mp4" />
+            <Video
+              autoPlay
+              loop
+              muted
+              controls={["PlayPause", "Seek", "Time", "Volume", "Fullscreen"]}
+              poster={thumbnail}
+            >
+              <source src={vid} type="video/mp4" />
             </Video>
-            
+
             {/* <button onClick={handleClosePopup}>Close</button> */}
-          {/* </div> */}
-        </div>
-      ) : null}
-    </div>
-      
+            {/* </div> */}
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 };
