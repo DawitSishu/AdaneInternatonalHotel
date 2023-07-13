@@ -39,7 +39,7 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ color: '#fff' }}>
               We are a four star hotel centeredd  in dire dawa. come and enjoy
-              the best hotel  experience in dire dawa.
+              the best hotel  experience in dire
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
