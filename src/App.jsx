@@ -20,8 +20,8 @@ function App() {
       }
         
         {/* <Loader /> */}
-        {/* <NavBar />
-        <About /> */}
+         <NavBar />
+        {/* <About /> */}
     </div>
   )
 }

@@ -13,10 +13,12 @@ const NavBar = () => {
       paused: true,
     });
 
-    tl.current.to(".menu", {
+    tl.current.fromTo(".menu",{
+      opacity: 0,
+    }, {
       top: 0,
-      ease: "bounce.out",
-      duration: 1,
+      opacity: 1,
+      duration: 0.5,
     });
     tl.current.to(
       ".line1",
