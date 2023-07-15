@@ -6,6 +6,7 @@ import Loader from './Components/Loader';
 import About from './Components/About';
 import Footer from './Components/Footer';
 import Home2 from './Components/Home2';
+import Gallery from './Components/Gallery';
 
 function App() {
   const [vidplaying,setVidPlaying] = useState(true);
@@ -21,9 +22,10 @@ function App() {
       } */}
         {/* <Home /> */}
         {/* <Loader /> */}
-         <NavBar />
+         {/* <NavBar /> */}
         {/* <About /> */}
-        <Home2 />
+        {/* <Home2 /> */}
+        <Gallery />
     </div>
   )
 }
