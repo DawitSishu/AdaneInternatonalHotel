@@ -7,7 +7,7 @@ import Footer from '../Footer';
 
 const index = () => {
   return (
-    <>
+    <div>
      <Grid
     container
     spacing={0}
@@ -300,7 +300,7 @@ const index = () => {
         </Grid>
       </Box>
       <Footer />
-    </>
+    </div>
   );
 };
 

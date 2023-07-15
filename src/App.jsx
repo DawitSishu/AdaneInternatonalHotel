@@ -19,9 +19,9 @@ function App() {
       {/* {
         vidplaying ?  <Home stop={stopVideo}/> : <About />
       } */}
-        
+        {/* <Home /> */}
         {/* <Loader /> */}
-         {/* <NavBar /> */}
+         <NavBar />
         {/* <About /> */}
         <Home2 />
     </div>
