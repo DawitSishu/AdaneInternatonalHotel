@@ -8,6 +8,33 @@ import Footer from '../Footer';
 const index = () => {
   return (
     <>
+     <Grid
+    container
+    spacing={0}
+    direction="column"
+    alignItems="center"
+    justifyContent="center"
+    sx={{ 
+      position: 'relative',
+      minHeight: '100vh', 
+      backgroundImage: `url(${image})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      marginBottom: 5,
+    }}
+
+  >
+     <div className="home2-overlay"></div>
+    <Grid item justifyContent="center" zIndex={1}> 
+            <Typography variant="h2" align="center" sx={{fontFamily:'cursive'}}>
+             Adane International Hotel
+            </Typography>
+            <Typography variant="h4" align="center" className="home2-slogan" >
+             Designed {'  '} For {'  '} Relaxation
+            </Typography>
+    </Grid>
+  </Grid>
       <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h3" align="center">
