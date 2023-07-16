@@ -1,0 +1,23 @@
+.panel {
+    width: 100vw;
+    height: 100vh;
+}
+
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+
+}
+.purple{
+    background-color: purple;
+
+}
+.green{
+    background-color: green;
+
+}
+.blue{
+    background-color: blue;
+}
