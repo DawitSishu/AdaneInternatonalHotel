@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,Suspense} from 'react';
 import './App.css';
 import NavBar from './Components/Navbar';
 import Home from './Components/Home';
@@ -17,7 +17,9 @@ function App() {
   }
 
   return (
-    <div >
+    // <div >
+    <Suspense fallback={<Loader />}>
+
       {/* {
         vidplaying ?  <Home stop={stopVideo}/> : <About />
       } */}
@@ -28,7 +30,7 @@ function App() {
         {/* <Home2 /> */}
         {/* <Gallery /> */}
         <Contact />
-    </div>
+    </Suspense>
   )
 }
 
