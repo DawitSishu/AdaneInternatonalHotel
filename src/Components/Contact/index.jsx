@@ -2,11 +2,12 @@ import React, { Suspense } from "react";
 import "./style.css";
 import image from "../../assets/h.jpg";
 import { Grid, Typography, Container, Box } from "@mui/material";
-import Loader from "../Loader";
+import ContactForm from "./ContactForm";
+import Footer from "../Footer";
 
 const index = () => {
   return (
-    <>
+    <div>
       <Grid
         container
         spacing={0}
@@ -61,7 +62,24 @@ const index = () => {
           </Box>
         </Grid>
       </Grid>
-    </>
+      <Grid
+          container
+          justifyContent="center"
+          zIndex={1}
+          sx={{ marginTop: 40 }}
+          xs={12}
+        >
+          <Typography
+            variant="h2"
+            align="center"
+            sx={{color:'gold',fontWeight:'bold'}}
+          >
+            Get In Touch
+          </Typography>
+        </Grid>
+        <ContactForm />
+        <Footer />
+    </div>
   );
 };
 export default index;
