@@ -9,3 +9,9 @@ justify-content: center;
 align-Items : center;
 overflow : hidden;
 }
+/* .img-navigator{
+    position: absolute;
+    bottom: 5%;
+    display: grid;
+   al: space-around;
+} */

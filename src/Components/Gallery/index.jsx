@@ -1,7 +1,18 @@
-import React, {useState} from "react";
-import './style.css';
+import React, { useState } from "react";
+import "./style.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Grid } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import CloseIcon from "@mui/icons-material/Close";
+import { styled } from "@mui/material/styles";
 import h from "../../assets/h.jpg";
+
+const ImgNavigator = styled("div")({
+  display: "flex",
+  justifyContent: "space-between",
+});
 
 const images = [
   h,
@@ -17,36 +28,63 @@ const images = [
 ];
 
 const index = () => {
-  const [data,setData] = useState({img:'',i:0});
+  const [data, setData] = useState({ img: "", i: 0 });
 
-  const viewImage = (img , i )=>{
-    setData({img,i});
-  }
+  const viewImage = (img, i) => {
+    setData({ img, i });
+  };
 
-  const imgAction = (action) =>{
+  const imgAction = (action) => {
     let i = data.i;
-    if (action == 'next') {
-      setData({img:images[i + 1], i : i+1});
-    } else if (action == 'prev') {
-      setData({img:images[i - 1], i : i-1});
+    if (action == "next") {
+      setData({ img: images[i + 1], i: i + 1 });
+    } else if (action == "prev") {
+      setData({ img: images[i - 1], i: i - 1 });
     } else if (!action) {
-      setData({img:'',i:0});
+      setData({ img: "", i: 0 });
     }
-  }
+  };
 
   return (
-    <div >
-      {
-        data.img ? (
-          <div className="img-displayer">
-            <button style={{position:'absolute',right:'10px',top:'10px'}} onClick={()=>imgAction()}>X</button>
-            <button onClick={()=>imgAction('prev')}>prev</button>
-            <img  src={data.img} style={{width:'auto', maxWidth:'90%', maxHeight:'90%'}} />
-            <button onClick={()=>imgAction('next')}>next</button>
-          </div>
-        ) : null
-      }
-      <div style={{padding:'15px'}}> 
+    <div>
+      {data.img ? (
+        <div className="img-displayer">
+          <IconButton
+            onClick={() => imgAction()}
+            sx={{ position: "absolute", right: "4%", top: "4%" }}
+          >
+            <CloseIcon sx={{ color: "gold", fontSize: "2.5rem" }} />
+          </IconButton>
+          <Grid
+            container
+            justifyContent="center"
+            sx={{ position: "absolute", bottom: "5%" }}
+            spacing={10}
+          >
+            <Grid item>
+              <IconButton
+                onClick={() => imgAction("prev")}
+                sx={{ backgroundColor: "black !important", borderColor: "black" }}
+              >
+                <NavigateBeforeIcon sx={{ color: "gold" }} />
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <IconButton
+                onClick={() => imgAction("next")}
+                sx={{ backgroundColor: "black !important", borderColor: "black" }}
+              >
+                <NavigateNextIcon sx={{ color: "gold" }} />
+              </IconButton>
+            </Grid>
+          </Grid>
+          <img
+            src={data.img}
+            style={{ width: "auto", maxWidth: "90%", maxHeight: "90%" }}
+          />
+        </div>
+      ) : null}
+      <div style={{ padding: "20px" }}>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter="20px">
             {images.map((image, i) => (
@@ -55,7 +93,7 @@ const index = () => {
                 src={image}
                 style={{ width: "100%", display: "block" }}
                 alt=""
-                onClick={()=> viewImage(image,i)}
+                onClick={() => viewImage(image, i)}
               />
             ))}
           </Masonry>
