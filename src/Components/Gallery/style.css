@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'cursive';
+    src: url('../../assets/AnandaBlackPersonalUseRegular-rg9Rx.ttf');
+  }
+  
 .img-displayer{
-width: 100%;
+width: 100vw;
 height : 100vh;
 background : transparent;
 backdrop-filter: blur(25px);
@@ -9,9 +14,11 @@ justify-content: center;
 align-Items : center;
 overflow : hidden;
 }
-/* .img-navigator{
-    position: absolute;
-    bottom: 5%;
-    display: grid;
-   al: space-around;
-} */
+.gallery-header{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.gallery-text{
+    font-family: cursive !important;
+}

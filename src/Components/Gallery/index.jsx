@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import CloseIcon from "@mui/icons-material/Close";
 import h from "../../assets/h.jpg";
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 
 const images = [
@@ -41,10 +43,8 @@ const index = () => {
   };
 
   return (
-    <div>
-      <div style={{height:'60vh'}}>
-
-      </div>
+    <div style={{overflow:'hidden'}}>
+      <Navbar />
       {data.img ? (
         <div className="img-displayer">
           <IconButton
@@ -88,6 +88,15 @@ const index = () => {
           />
         </div>
       ) : null}
+      <Grid container direction="column"
+    alignItems="center"
+    justifyContent="center">
+      <Grid item justifyContent="center" sx={{margin: 10}}>
+              <Typography align="center" variant="h4" className= "gallery-text">
+              Get A Glimpse Of Our Exquisite Hotel
+              </Typography>
+      </Grid>
+        </Grid>
       <div style={{ padding: "20px" }}>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter="20px">
@@ -103,6 +112,7 @@ const index = () => {
           </Masonry>
         </ResponsiveMasonry>
       </div>
+      <Footer />
     </div>
   );
 };
