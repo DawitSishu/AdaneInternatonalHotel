@@ -143,4 +143,19 @@
   }
   
 
-  
+  @media (max-width: 600px) {
+    .menu__item-link{
+        font-size:38px !important;
+    }
+    .marquee span{
+      font-size:28px !important;
+    }
+}
+@media (max-width: 278px) {
+  .menu__item-link{
+      font-size:28px !important;
+  }
+  .marquee span{
+    font-size:18px !important;
+  }
+}
