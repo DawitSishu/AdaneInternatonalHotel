@@ -6,13 +6,8 @@ import IconButton from "@mui/material/IconButton";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import CloseIcon from "@mui/icons-material/Close";
-import { styled } from "@mui/material/styles";
 import h from "../../assets/h.jpg";
 
-const ImgNavigator = styled("div")({
-  display: "flex",
-  justifyContent: "space-between",
-});
 
 const images = [
   h,
@@ -47,6 +42,9 @@ const index = () => {
 
   return (
     <div>
+      <div style={{height:'60vh'}}>
+
+      </div>
       {data.img ? (
         <div className="img-displayer">
           <IconButton
@@ -64,7 +62,10 @@ const index = () => {
             <Grid item>
               <IconButton
                 onClick={() => imgAction("prev")}
-                sx={{ backgroundColor: "black !important", borderColor: "black" }}
+                sx={{
+                  backgroundColor: "black !important",
+                  borderColor: "black",
+                }}
               >
                 <NavigateBeforeIcon sx={{ color: "gold" }} />
               </IconButton>
@@ -72,7 +73,10 @@ const index = () => {
             <Grid item>
               <IconButton
                 onClick={() => imgAction("next")}
-                sx={{ backgroundColor: "black !important", borderColor: "black" }}
+                sx={{
+                  backgroundColor: "black !important",
+                  borderColor: "black",
+                }}
               >
                 <NavigateNextIcon sx={{ color: "gold" }} />
               </IconButton>
