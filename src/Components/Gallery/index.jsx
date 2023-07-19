@@ -7,6 +7,7 @@ const images = [
   h,
   "https://picsum.photos/200/300",
   "https://picsum.photos/300/300",
+  h,
   "https://picsum.photos/3000/3000",
   "https://picsum.photos/3000/3000",
   "https://picsum.photos/300/500",
