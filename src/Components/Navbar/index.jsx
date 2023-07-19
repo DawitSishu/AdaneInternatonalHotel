@@ -79,6 +79,7 @@ const NavBar = () => {
         <div className="line line2"></div>
       </div>
       <div className="menu">
+        <br />
         <div className="menu__item">
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Home

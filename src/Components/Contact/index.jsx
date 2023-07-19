@@ -67,7 +67,6 @@ const index = () => {
           justifyContent="center"
           zIndex={1}
           sx={{ marginTop: 40 }}
-          xs={12}
         >
           <Typography
             variant="h2"
