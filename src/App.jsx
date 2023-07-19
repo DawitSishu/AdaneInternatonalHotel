@@ -8,7 +8,8 @@ import Loader from './Components/Loader';
 // import Home2 from './Components/Home2';
 // import Gallery from './Components/Gallery';
 // import Contact from './Components/Contact';
-import Special from './Components/Special';
+// import Special from './Components/Special';
+import Services from './Components/Services';
 
 function App() {
   const [vidplaying,setVidPlaying] = useState(true);
@@ -31,7 +32,8 @@ function App() {
          {/* <Home2 />*/}
          {/* <Gallery /> */}
          {/* <Contact /> */}
-        <Special />
+        {/* <Special /> */}
+        <Services />
     </Suspense>
   )
 }
