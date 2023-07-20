@@ -1,13 +1,41 @@
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography, Button, ListItem, ListItemIcon  } from "@mui/material";
 import React from "react";
 import "./style.css";
 import image from "../../assets/h.jpg";
 import { FaPlus } from "react-icons/fa";
 import Footer from "../Footer";
+import NavBar from "../Navbar";
+import RoomServiceIcon from '@mui/icons-material/RoomService';
+import WifiIcon from '@mui/icons-material/Wifi';
+import LocalParkingIcon from '@mui/icons-material/LocalParking';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: {
+      main: "#FFD700",
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+});
+
 
 const index = () => {
   return (
     <div>
+      <NavBar />
+       <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <Grid
         container
         spacing={0}
@@ -68,7 +96,7 @@ const index = () => {
             <Box className="box-container">
               <img src={image} alt="Your Image" className="box-image" />
               <div className="box-overlay">
-                <div className="box-text">Wedding</div>
+                <div className="box-text">Luxury Wedding</div>
               </div>
             </Box>
           </Grid>
@@ -76,7 +104,7 @@ const index = () => {
             <Box className="box-container">
               <img src={image} alt="Your Image" className="box-image" />
               <div className="box-overlay">
-                <div className="box-text">st1</div>
+                <div className="box-text">Ultimate Honeymoon</div>
               </div>
             </Box>
           </Grid>
@@ -84,7 +112,7 @@ const index = () => {
             <Box className="box-container">
               <img src={image} alt="Your Image" className="box-image" />
               <div className="box-overlay">
-                <div className="box-text">st2</div>
+                <div className="box-text">Special Occasions</div>
               </div>
             </Box>
           </Grid>
@@ -338,9 +366,60 @@ const index = () => {
             Explore More <FaPlus style={{ marginLeft: 10 }} />
           </Button>
         </Grid>
-
         </Grid>
+        
+        <Grid container spacing={2} sx={{ padding: '20px', margin:1 }}>
+        <Grid item xs={12}>
+        <Typography variant="h4" align="center" sx={{ marginBottom: '20px' }}>
+          Where You Can Find Us
+        </Typography>
+          </Grid>
+      {/* Left Side: Google Maps */}
+      <Grid item xs={12} sm={6} zIndex={1} justifyContent="center" sx={{ height: "60vh", paddingRight: 2 }}>
+        <Box sx={{ width: "100%", height: "100%" }} className="home-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.958406780044!2d41.84623727511885!3d9.598849990487015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631018ef6cf08e7%3A0xd8cdd0828ca57800!2z4Yqg4Yuz4YqQIOGIhuGJtOGIjSBIb3RlbCBBZGFuZQ!5e0!3m2!1sen!2set!4v1689189837125!5m2!1sen!2set"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Box>
+      </Grid>
+
+      {/* Right Side: Services */}
+      <Grid item xs={12} sm={6} sx={{ paddingLeft: 2 }}>
+        <ListItem>
+          <ListItemIcon>
+            <WifiIcon />
+          </ListItemIcon>
+          <Typography>Free Wi-Fi Internet in Rooms</Typography>
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <RoomServiceIcon />
+          </ListItemIcon>
+          <Typography>In Room Dining (Room Service) Available At Anytime</Typography>
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <LocalParkingIcon />
+          </ListItemIcon>
+          <Typography>Local Self Parking: For Free</Typography>
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <LocationOnIcon />
+          </ListItemIcon>
+          <Typography>Walking Distance from he famous and historical Dire Dawa Bridge</Typography>
+        </ListItem>
+        {/* Add more services here */}
+      </Grid>
+    </Grid>
       </Box>
+      </ThemeProvider>
       <Footer />
     </div>
   );

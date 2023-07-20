@@ -73,3 +73,10 @@
   .home2-slogan{
     font-family: 'cursive' !important;
   }
+  .home-map{
+    position: relative;
+    border: 3px solid gold;
+    box-shadow: 4px 4px 16px rgba(255, 255, 255, 0.8);
+    border-radius:10px;
+    overflow: hidden;
+  }

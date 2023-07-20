@@ -46,7 +46,7 @@ const index = () => {
           <Box
             sx={{
               width: "80%",
-              height: "60%",
+              height: "60%", 
             }}
             className="contact-box"
           >
