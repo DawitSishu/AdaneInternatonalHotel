@@ -36,7 +36,22 @@ const index = () => {
             Personalized Relaxation.
           </Typography>
         </Grid>
+        <Grid container justifyContent="center">
       </Grid>
+      </Grid>
+      <Grid item justifyContent="center" sx={{ padding: 3 }}>
+          <Typography variant="p" align="center">
+            Whether you're planning a romantic wedding or a special event, a
+            family vacation, or a solo adventure, our hotel offers a range of
+            special packages that are tailored to meet your needs. From wedding
+            packages that offer the perfect setting for your special day, to
+            relaxation packages that allow you to unwind and recharge, we have
+            something for everyone. Our packages include exclusive benefits such
+            as discounted rates, complimentary meals, and access to our top
+            amenities. Browse our selection of packages today and discover the
+            perfect experience for you.
+          </Typography>
+        </Grid>
       <Grid container spacing={2} justifyContent="center">
         <Grid item xs={12} md={6}>
           <Grid
