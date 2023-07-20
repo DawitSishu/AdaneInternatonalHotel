@@ -2,7 +2,6 @@ import { Grid, Typography } from "@mui/material";
 import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
 
-// s
 // room
 // Conference and Banquet Facilities
 // 24-hour Reception and Security
@@ -139,6 +138,60 @@ const index = () => {
               libations, Our hotel is the ideal destination for any occasion.
             </Typography>
           </Grid>
+        </Grid>
+      </Grid>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12} md={6}>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              padding: 5,
+            }}
+            className="about-content-text"
+          >
+            <Typography
+              variant="h3"
+              align="center"
+              className="about-text-title"
+            >
+              Conference and Banquet Facilities
+            </Typography>
+            <Typography variant="body1" align="center">
+              Our hotel offers exceptional conference and banquet facilities
+              that are perfect for a variety of events, from business meetings
+              and conferences to weddings and other special occasions. The venue
+              features a range of flexible event spaces, including elegant
+              ballrooms, intimate boardrooms, and spacious conference halls.
+              With state-of-the-art audio-visual equipment and reliable Wi-Fi,
+              the facilities are equipped to handle any type of event, from
+              small meetings to large-scale conferences. The professional and
+              experienced event staff are dedicated to ensuring that every
+              detail is taken care of, from catering and decorations to
+              technical support and logistics. With its exceptional facilities
+              and unparalleled service, Our hotel is the perfect destination
+              for events of any size and type.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          className="logo"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            alt="logp"
+            style={{ width: "40%", height: "80%" }}
+          />
         </Grid>
       </Grid>
     </div>
