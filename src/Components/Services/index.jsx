@@ -3,7 +3,6 @@ import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
 
 // room
-// Conference and Banquet Facilities
 // 24-hour Reception and Security
 // Foods(meals)
 const index = () => {
@@ -171,8 +170,8 @@ const index = () => {
               experienced event staff are dedicated to ensuring that every
               detail is taken care of, from catering and decorations to
               technical support and logistics. With its exceptional facilities
-              and unparalleled service, Our hotel is the perfect destination
-              for events of any size and type.
+              and unparalleled service, Our hotel is the perfect destination for
+              events of any size and type.
             </Typography>
           </Grid>
         </Grid>
@@ -192,6 +191,59 @@ const index = () => {
             alt="logp"
             style={{ width: "40%", height: "80%" }}
           />
+        </Grid>
+      </Grid>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          className="logo"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            alt="logp"
+            style={{ width: "40%", height: "80%" }}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              padding: 5,
+            }}
+            className="about-content-text"
+          >
+            <Typography
+              variant="h3"
+              align="center"
+              className="about-text-title"
+            >
+              Reception and Security
+            </Typography>
+            <Typography variant="body1" align="center">
+              Our hotel offers 24-hour reception and security service,
+              ensuring that guests have access to assistance and support around
+              the clock. The reception staff are always available to help with
+              any needs or requests, whether it is checking in or out, arranging
+              transportation, or providing recommendations for local
+              attractions. Additionally, the hotel has a dedicated security team
+              that is available at all times to ensure the safety and security
+              of guests and their belongings. With state-of-the-art security
+              systems and trained personnel, guests can be assured of a safe and
+              secure stay. The combination of round-the-clock reception and
+              security services provides guests with peace of mind and a
+              worry-free experience during their stay at Adane International Hotel.
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
     </div>
