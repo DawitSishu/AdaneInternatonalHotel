@@ -1,13 +1,14 @@
 import { Grid, Typography } from "@mui/material";
 import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 // room
-// 24-hour Reception and Security
-// Foods(meals)
 const index = () => {
   return (
     <div>
+      <Navbar />
       <Grid
         container
         spacing={0}
@@ -246,6 +247,7 @@ const index = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Footer />
     </div>
   );
 };
