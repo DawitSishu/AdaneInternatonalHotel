@@ -6,11 +6,11 @@ import StarIcon from '@mui/icons-material/Star';
 import h from '../../assets/1.jpg';
 import j from '../../assets/2.jpg';
 
-const RoomPage = () => {
+const RoomPage = ({}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Replace these with your actual image URLs
-  const mainImage = h;
+//   const mainImage = h;
   const thumbnailImages = [h,j,h,j];
 
    const handleNextImage = () => {
