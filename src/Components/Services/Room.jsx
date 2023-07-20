@@ -3,8 +3,6 @@ import { Grid, Typography, IconButton, List, ListItem, ListItemIcon, Box } from 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import StarIcon from '@mui/icons-material/Star';
-import h from '../../assets/1.jpg';
-import j from '../../assets/2.jpg';
 
 const RoomPage = ({roomData}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

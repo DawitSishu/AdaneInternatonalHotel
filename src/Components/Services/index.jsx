@@ -18,7 +18,6 @@ import h from "../../assets/1.jpg";
 import j from "../../assets/2.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 
-
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -37,45 +36,64 @@ const darkTheme = createTheme({
   },
 });
 
-// room
 const roomData = [
   {
     image: h,
-    description: "Description of Room 1...",
+    description:
+      " This luxurious suite offers the ultimate experience in comfort and style. Relax in the full sofa set while enjoying the multi-channel television system, or catch up on work at the study desk with access to high-speed WiFi internet. Individual controlled air conditioning ensures your perfect temperature, and 24-hour room service is always available. Plus, enjoy hot drinks access right in your room.",
     images: [h, j, h, j, h],
-    title: "Room 1",
+    title: "LUXURY SUITE ROOM",
     features: [
-      "Room 1 feature 1",
-      "Room 1 feature 2",
-      "Room 1 feature 3",
-      // Add more features for Room 1
+      "24 hour room service",
+      "Study Desk",
+      "Acces to high speed WiFi internet",
+      "Individual controlled air conditionings",
+      "Full sofa set",
+      "Multi channel television system",
+      "Hot drinks access in the room",
     ],
   },
   {
     image: j,
-    description: "Description of Room 2...",
+    description:
+      "Experience royal luxury in the Queen's Room. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
     images: [h, j, h, j, h],
-    title: "Room ",
-    features: ["Room 2 feature 1", "Room 2 feature 2", "Room 2 feature 3"],
+    title: "QUEEN'S ROOM ",
+    features: [
+      "24 hour room service",
+      "Study Desk",
+      "Multi channel television system",
+      "Acces to high speed WiFi internet",
+      "Individual controlled air conditionings",
+    ],
   },
   {
     image: h,
-    description: "Description of Room 1...",
+    description:
+      "This cozy room is perfect for friends or family traveling together. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
     images: [h, j, h, j, h],
-    title: "Room 1",
+    title: "TWIN BED",
     features: [
-      "Room 1 feature 1",
-      "Room 1 feature 2",
-      "Room 1 feature 3",
-      // Add more features for Room 1
+      "24 hour room service",
+      "Study Desk",
+      "Multi channel television system",
+      "Acces to high speed WiFi internet",
+      "Individual controlled air conditionings",
     ],
   },
   {
     image: j,
-    description: "Description of Room 2...",
+    description:
+      "This comfortable room offers all the amenities you need for a relaxing stay. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
     images: [h, j, h, j, h],
-    title: "Room ",
-    features: ["Room 2 feature 1", "Room 2 feature 2", "Room 2 feature 3"],
+    title: "STANDARD ROOM",
+    features: [
+      "24 hour room service",
+      "Study Desk",
+      "Multi channel television system",
+      "Acces to high speed WiFi internet",
+      "Individual controlled air conditionings",
+    ],
   },
 ];
 
@@ -91,53 +109,53 @@ const index = () => {
   };
 
   return (
-    <div>
+    <div style={{overflow:'hidden'}}>
       <Navbar />
       <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justifyContent="center"
-        sx={{
-          position: "relative",
-          minHeight: "40vh",
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          marginBottom: 5,
-        }}
-      >
-        <div className="special-overlay"></div>
-        <Grid item justifyContent="center" zIndex={1}>
-          <Typography
-            variant="h3"
-            align="center"
-            sx={{ fontFamily: "cursive" }}
-          >
-            Discover Our Exclusive Amenities for Unrivaled Luxury and
-            Personalized Relaxation.
+        <CssBaseline />
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            position: "relative",
+            minHeight: "40vh",
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            marginBottom: 5,
+          }}
+        >
+          <div className="special-overlay"></div>
+          <Grid item justifyContent="center" zIndex={1}>
+            <Typography
+              variant="h3"
+              align="center"
+              sx={{ fontFamily: "cursive" }}
+            >
+              Discover Our Exclusive Amenities for Unrivaled Luxury and
+              Personalized Relaxation.
+            </Typography>
+          </Grid>
+          <Grid container justifyContent="center"></Grid>
+        </Grid>
+        <Grid item justifyContent="center" sx={{ padding: 3 }}>
+          <Typography variant="p" align="center">
+            Whether you're planning a romantic wedding or a special event, a
+            family vacation, or a solo adventure, our hotel offers a range of
+            special packages that are tailored to meet your needs. From wedding
+            packages that offer the perfect setting for your special day, to
+            relaxation packages that allow you to unwind and recharge, we have
+            something for everyone. Our packages include exclusive benefits such
+            as discounted rates, complimentary meals, and access to our top
+            amenities. Browse our selection of packages today and discover the
+            perfect experience for you.
           </Typography>
         </Grid>
-        <Grid container justifyContent="center"></Grid>
-      </Grid>
-      <Grid item justifyContent="center" sx={{ padding: 3 }}>
-        <Typography variant="p" align="center">
-          Whether you're planning a romantic wedding or a special event, a
-          family vacation, or a solo adventure, our hotel offers a range of
-          special packages that are tailored to meet your needs. From wedding
-          packages that offer the perfect setting for your special day, to
-          relaxation packages that allow you to unwind and recharge, we have
-          something for everyone. Our packages include exclusive benefits such
-          as discounted rates, complimentary meals, and access to our top
-          amenities. Browse our selection of packages today and discover the
-          perfect experience for you.
-        </Typography>
-      </Grid>
-      <Grid container justifyContent="center" spacing={2} sx={{margin:3}}>
+        <Grid container justifyContent="center" spacing={2} sx={{ marginTop: 3,marginBottom:3 }}>
           <Grid item xs={12}>
             <Typography variant="h3" align="center" color="primary">
               Comfortable Rooms
@@ -168,264 +186,268 @@ const index = () => {
           {roomData.map((card, index) => (
             <Grid item key={index}>
               <Card
-                sx={{
-                  maxWidth: 345,
-                  minHeight: 380,
-                  marginBottom: 5,
-                  boxShadow: "0 2px 10px 0 rgba(255, 215, 0, 0.5)",
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={card.image}
-                  alt={card.title}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    sx={{ color: "gold", fontWeight: "bold" }}
-                  >
-                    {card.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {card.description}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    onClick={() => handleLoadMore(index)}
-                  >
-                    Show More
-                  </Button>
-                </CardActions>
-              </Card>
+  sx={{
+    maxWidth: 450,
+    height: 550,
+    marginBottom: 5,
+    boxShadow: "0 2px 10px 0 rgba(255, 215, 0, 0.5)",
+    display: 'flex',
+    flexDirection: 'column',
+  }}
+>
+  <CardMedia
+    component="img"
+    height="280" // Increase the height of the CardMedia here
+    image={card.image}
+    alt={card.title}
+  />
+  <CardContent sx={{ flexGrow: 1 }}>
+    <Typography
+      gutterBottom
+      variant="h5"
+      component="div"
+      sx={{ color: "gold", fontWeight: "bold" }}
+    >
+      {card.title}
+    </Typography>
+    <Typography variant="body2" color="text.secondary">
+      {card.description}
+    </Typography>
+  </CardContent>
+  <CardActions>
+    <Button
+      variant="contained"
+      color="primary"
+      fullWidth
+      onClick={() => handleLoadMore(index)}
+    >
+      Show More
+    </Button>
+  </CardActions>
+</Card>
+
+
             </Grid>
           ))}
         </Grid>
         <Grid ref={scrollToRef}>
           {showRoomPage ? <RoomPage roomData={roomData[idx]} /> : null}
         </Grid>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={6}>
+        <Grid container spacing={2} justifyContent="center">
+          <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: 5,
+              }}
+              className="about-content-text"
+            >
+              <Typography
+                variant="h3"
+                align="center"
+                className="about-text-title"
+                color="primary"
+              >
+                Restaurant
+              </Typography>
+              <Typography variant="body1" align="center">
+                Our Hotel offers an exceptional dining experience with its
+                top-notch restaurant service. From the moment you step through
+                the door, you will be greeted by a friendly and attentive staff
+                who are dedicated to making your visit a memorable one. With an
+                extensive menu of delicious and expertly prepared dishes, you
+                are sure to find something that satisfies your taste buds. The
+                restaurant prides itself on using only the freshest ingredients,
+                so you can be sure that your meal will be of the highest
+                quality. Combined with a comfortable and inviting atmosphere,
+                Adane international Hotel is the perfect place to enjoy a meal
+                with friends and family or to celebrate a special occasion.
+              </Typography>
+            </Grid>
+          </Grid>
           <Grid
+            item
+            xs={12}
+            md={6}
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "column",
-              padding: 5,
             }}
-            className="about-content-text"
+            className="logo"
           >
-            <Typography
-              variant="h3"
-              align="center"
-              className="about-text-title"
-              color="primary"
-            >
-              Restaurant
-            </Typography>
-            <Typography variant="body1" align="center">
-              Our Hotel offers an exceptional dining experience with its
-              top-notch restaurant service. From the moment you step through the
-              door, you will be greeted by a friendly and attentive staff who
-              are dedicated to making your visit a memorable one. With an
-              extensive menu of delicious and expertly prepared dishes, you are
-              sure to find something that satisfies your taste buds. The
-              restaurant prides itself on using only the freshest ingredients,
-              so you can be sure that your meal will be of the highest quality.
-              Combined with a comfortable and inviting atmosphere, Adane
-              international Hotel is the perfect place to enjoy a meal with
-              friends and family or to celebrate a special occasion.
-            </Typography>
+            <img
+              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="logp"
+              style={{ width: "40%", height: "80%" }}
+            />
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="logo"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-            alt="logp"
-            style={{ width: "40%", height: "80%" }}
-          />
-        </Grid>
-      </Grid>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="logo"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-            alt="logp"
-            style={{ width: "40%", height: "80%" }}
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid container spacing={2} justifyContent="center">
           <Grid
+            item
+            xs={12}
+            md={6}
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "column",
-              padding: 5,
             }}
-            className="about-content-text"
+            className="logo"
           >
-            <Typography
-              variant="h3"
-              align="center"
-              className="about-text-title"
-              color="primary"
+            <img
+              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="logp"
+              style={{ width: "40%", height: "80%" }}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: 5,
+              }}
+              className="about-content-text"
             >
-              Bar
-            </Typography>
-            <Typography variant="body1" align="center">
-              Our hotel provides an exceptional bar service experience for its
-              patrons. The skilled bartenders are not only knowledgeable about
-              the extensive selection of drinks, but also provide personalized
-              recommendations based on individual preferences. Whether you are
-              in the mood for a classic cocktail or want to try something new
-              and innovative, the bar has a wide variety of options to choose
-              from. The atmosphere is cozy and inviting, making it the perfect
-              spot to unwind with friends after a long day or to enjoy a night
-              out on the town. With its exceptional service and tempting
-              libations, Our hotel is the ideal destination for any occasion.
-            </Typography>
+              <Typography
+                variant="h3"
+                align="center"
+                className="about-text-title"
+                color="primary"
+              >
+                Bar
+              </Typography>
+              <Typography variant="body1" align="center">
+                Our hotel provides an exceptional bar service experience for its
+                patrons. The skilled bartenders are not only knowledgeable about
+                the extensive selection of drinks, but also provide personalized
+                recommendations based on individual preferences. Whether you are
+                in the mood for a classic cocktail or want to try something new
+                and innovative, the bar has a wide variety of options to choose
+                from. The atmosphere is cozy and inviting, making it the perfect
+                spot to unwind with friends after a long day or to enjoy a night
+                out on the town. With its exceptional service and tempting
+                libations, Our hotel is the ideal destination for any occasion.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={6}>
+        <Grid container spacing={2} justifyContent="center">
+          <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: 5,
+              }}
+              className="about-content-text"
+            >
+              <Typography
+                variant="h3"
+                align="center"
+                className="about-text-title"
+                color="primary"
+              >
+                Conference and Banquet Facilities
+              </Typography>
+              <Typography variant="body1" align="center">
+                Our hotel offers exceptional conference and banquet facilities
+                that are perfect for a variety of events, from business meetings
+                and conferences to weddings and other special occasions. The
+                venue features a range of flexible event spaces, including
+                elegant ballrooms, intimate boardrooms, and spacious conference
+                halls. With state-of-the-art audio-visual equipment and reliable
+                Wi-Fi, the facilities are equipped to handle any type of event,
+                from small meetings to large-scale conferences. The professional
+                and experienced event staff are dedicated to ensuring that every
+                detail is taken care of, from catering and decorations to
+                technical support and logistics. With its exceptional facilities
+                and unparalleled service, Our hotel is the perfect destination
+                for events of any size and type.
+              </Typography>
+            </Grid>
+          </Grid>
           <Grid
+            item
+            xs={12}
+            md={6}
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "column",
-              padding: 5,
             }}
-            className="about-content-text"
+            className="logo"
           >
-            <Typography
-              variant="h3"
-              align="center"
-              className="about-text-title"
-              color="primary"
-            >
-              Conference and Banquet Facilities
-            </Typography>
-            <Typography variant="body1" align="center">
-              Our hotel offers exceptional conference and banquet facilities
-              that are perfect for a variety of events, from business meetings
-              and conferences to weddings and other special occasions. The venue
-              features a range of flexible event spaces, including elegant
-              ballrooms, intimate boardrooms, and spacious conference halls.
-              With state-of-the-art audio-visual equipment and reliable Wi-Fi,
-              the facilities are equipped to handle any type of event, from
-              small meetings to large-scale conferences. The professional and
-              experienced event staff are dedicated to ensuring that every
-              detail is taken care of, from catering and decorations to
-              technical support and logistics. With its exceptional facilities
-              and unparalleled service, Our hotel is the perfect destination for
-              events of any size and type.
-            </Typography>
+            <img
+              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="logp"
+              style={{ width: "40%", height: "80%" }}
+            />
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="logo"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-            alt="logp"
-            style={{ width: "40%", height: "80%" }}
-          />
-        </Grid>
-      </Grid>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="logo"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-            alt="logp"
-            style={{ width: "40%", height: "80%" }}
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid container spacing={2} justifyContent="center">
           <Grid
+            item
+            xs={12}
+            md={6}
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "column",
-              padding: 5,
             }}
-            className="about-content-text"
+            className="logo"
           >
-            <Typography
-              variant="h3"
-              align="center"
-              className="about-text-title"
-              color="primary"
+            <img
+              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="logp"
+              style={{ width: "40%", height: "80%" }}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: 5,
+              }}
+              className="about-content-text"
             >
-              Reception and Security
-            </Typography>
-            <Typography variant="body1" align="center">
-              Our hotel offers 24-hour reception and security service, ensuring
-              that guests have access to assistance and support around the
-              clock. The reception staff are always available to help with any
-              needs or requests, whether it is checking in or out, arranging
-              transportation, or providing recommendations for local
-              attractions. Additionally, the hotel has a dedicated security team
-              that is available at all times to ensure the safety and security
-              of guests and their belongings. With state-of-the-art security
-              systems and trained personnel, guests can be assured of a safe and
-              secure stay. The combination of round-the-clock reception and
-              security services provides guests with peace of mind and a
-              worry-free experience during their stay at Adane International
-              Hotel.
-            </Typography>
+              <Typography
+                variant="h3"
+                align="center"
+                className="about-text-title"
+                color="primary"
+              >
+                Reception and Security
+              </Typography>
+              <Typography variant="body1" align="center">
+                Our hotel offers 24-hour reception and security service,
+                ensuring that guests have access to assistance and support
+                around the clock. The reception staff are always available to
+                help with any needs or requests, whether it is checking in or
+                out, arranging transportation, or providing recommendations for
+                local attractions. Additionally, the hotel has a dedicated
+                security team that is available at all times to ensure the
+                safety and security of guests and their belongings. With
+                state-of-the-art security systems and trained personnel, guests
+                can be assured of a safe and secure stay. The combination of
+                round-the-clock reception and security services provides guests
+                with peace of mind and a worry-free experience during their stay
+                at Adane International Hotel.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
       </ThemeProvider>
       <Footer />
     </div>
