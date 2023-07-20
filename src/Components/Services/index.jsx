@@ -3,6 +3,7 @@ import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import RoomPage from "./Room";
 
 // room
 const index = () => {
@@ -261,6 +262,7 @@ const index = () => {
             </Typography>
           </Grid>
         </Grid>
+        <RoomPage />
       </Grid>
       <Footer />
     </div>

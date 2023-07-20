@@ -6,10 +6,11 @@ import Loader from './Components/Loader';
 import About from './Components/About';
 // import Footer from './Components/Footer';
 import Home2 from './Components/Home2';
-// import Gallery from './Components/Gallery';
-// import Contact from './Components/Contact';
+import Gallery from './Components/Gallery';
+import Contact from './Components/Contact';
 import Special from './Components/Special';
 import Services from './Components/Services';
+import RoomPage from './Components/Services/Room';
 
 function App() {
   const [vidplaying,setVidPlaying] = useState(true);
@@ -29,11 +30,12 @@ function App() {
          {/* <Loader /> */}
           {/* <NavBar /> */}
          {/* <About /> */}
-         <Home2 />
+         {/* <Home2 /> */}
          {/* <Gallery /> */}
          {/* <Contact /> */}
         {/* <Special /> */}
-        {/* <Services /> */}
+        <Services />
+        {/* <RoomPage /> */}
     </Suspense>
   )
 }
