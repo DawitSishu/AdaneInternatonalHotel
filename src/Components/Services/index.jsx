@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
 
-// bar
+// s
 // room
 // Conference and Banquet Facilities
 // 24-hour Reception and Security
@@ -88,6 +88,57 @@ const index = () => {
             alt="logp"
             style={{ width: "40%", height: "80%" }}
           />
+        </Grid>
+      </Grid>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          className="logo"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            alt="logp"
+            style={{ width: "40%", height: "80%" }}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              padding: 5,
+            }}
+            className="about-content-text"
+          >
+            <Typography
+              variant="h3"
+              align="center"
+              className="about-text-title"
+            >
+              Bar
+            </Typography>
+            <Typography variant="body1" align="center">
+              Our hotel provides an exceptional bar service experience for its
+              patrons. The skilled bartenders are not only knowledgeable about
+              the extensive selection of drinks, but also provide personalized
+              recommendations based on individual preferences. Whether you are
+              in the mood for a classic cocktail or want to try something new
+              and innovative, the bar has a wide variety of options to choose
+              from. The atmosphere is cozy and inviting, making it the perfect
+              spot to unwind with friends after a long day or to enjoy a night
+              out on the town. With its exceptional service and tempting
+              libations, Our hotel is the ideal destination for any occasion.
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
     </div>
