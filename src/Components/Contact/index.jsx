@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import image from "../../assets/h.jpg";
 import { Grid, Typography, Container, Box } from "@mui/material";
@@ -7,6 +7,9 @@ import Footer from "../Footer";
 import NavBar from "../Navbar";
 
 const index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <NavBar />

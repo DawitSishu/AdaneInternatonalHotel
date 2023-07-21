@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import {
   Grid,
   Box,
@@ -101,6 +101,10 @@ const index = () => {
   const [showRoomPage, setShowRoomPage] = useState(false);
   const [idx, setIdx] = useState(0);
   const scrollToRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleLoadMore = (i) => {
     setShowRoomPage(true);

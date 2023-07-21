@@ -6,7 +6,7 @@ import {
   ListItem,
   ListItemIcon,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from 'react';
 import "./style.css";
 import image from "../../assets/h.jpg";
 import { FaPlus } from "react-icons/fa";
@@ -17,6 +17,7 @@ import WifiIcon from "@mui/icons-material/Wifi";
 import LocalParkingIcon from "@mui/icons-material/LocalParking";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const darkTheme = createTheme({
   palette: {
@@ -37,6 +38,9 @@ const darkTheme = createTheme({
 });
 
 const index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <NavBar />
@@ -129,6 +133,7 @@ const index = () => {
             </Grid>
           </Grid>
           <Grid container justifyContent="center">
+            <Link to="/special-offers">
             <Button
               variant="outlined"
               sx={{
@@ -147,6 +152,7 @@ const index = () => {
             >
               Explore More <FaPlus style={{ marginLeft: 10 }} />
             </Button>
+            </Link>
           </Grid>
         </Grid>
         <Box>
@@ -279,6 +285,7 @@ const index = () => {
         </Box>
         <Box>
           <Grid container justifyContent="center">
+          <Link to="/services">
             <Button
               variant="outlined"
               sx={{
@@ -297,6 +304,7 @@ const index = () => {
             >
               Explore More <FaPlus style={{ marginLeft: 10 }} />
             </Button>
+            </Link>
           </Grid>
 
           <Grid container justifyContent="center" spacing={2}>
@@ -358,6 +366,7 @@ const index = () => {
               </Grid>
             </Grid>
             <Grid container justifyContent="center">
+            <Link to="/gallery" >
               <Button
                 variant="outlined"
                 sx={{
@@ -376,6 +385,7 @@ const index = () => {
               >
                 Explore More <FaPlus style={{ marginLeft: 10 }} />
               </Button>
+              </Link>
             </Grid>
           </Grid>
 

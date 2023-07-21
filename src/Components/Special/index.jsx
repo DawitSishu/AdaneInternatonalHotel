@@ -1,4 +1,5 @@
-import { Box, Grid, Typography, Button } from "@mui/material";
+import React, { useEffect } from "react";
+import { Grid, Typography } from "@mui/material";
 import image from "../../assets/h.jpg";
 import "./style.css";
 import { Card, CardContent, CardMedia } from "@mui/material";
@@ -55,6 +56,10 @@ const cardsData = [
 ];
 
 const index = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />

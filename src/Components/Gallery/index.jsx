@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./style.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Grid, Typography } from "@mui/material";
@@ -26,6 +26,10 @@ const images = [
 
 const index = () => {
   const [data, setData] = useState({ img: "", i: 0 });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const viewImage = (img, i) => {
     setData({ img, i });
