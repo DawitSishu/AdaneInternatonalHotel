@@ -42,7 +42,7 @@ const index = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
+    <div style={{overflow:'hidden'}}>
       <NavBar />
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />

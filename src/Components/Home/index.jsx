@@ -53,8 +53,8 @@ const Home = ({stop}) => {
   };
 
   return (
-    <Suspense fallback={<Loader />}>
-      <div className="main" style={{height:'100vh',overflowY:'hidden'}}>
+ 
+      <div className="main" style={{height:'100vh',overflowY:'hidden',overflowX:'hidden'}}>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
       <video ref={videoRef} src={background} autoPlay muted={isMuted} onEnded={stop} />
@@ -87,21 +87,6 @@ const Home = ({stop}) => {
             fontSize: '32px',}}>
           <img src={Logo} alt="Your Image" style={{ width: '100%', height: 'auto' }} />
         </Box>
-          {/* <Grid item xs={12}>
-            <Typography variant="h3" sx={{ fontFamily: 'myCursive', color: 'white' }} align="center">
-              Adane
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h3" sx={{ fontFamily: 'myCursive', color: 'white' }} align="center" xs={12}>
-              International
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h3" sx={{ fontFamily: 'myCursive', color: 'white' }} align="center" xs={12}>
-              Hotel
-            </Typography>
-          </Grid> */}
           <Button
             variant="outlined"
             style={{
@@ -121,7 +106,6 @@ const Home = ({stop}) => {
       {/* </Box> */}
       </ThemeProvider>
     </div>
-    </Suspense>
   );
 };
 
