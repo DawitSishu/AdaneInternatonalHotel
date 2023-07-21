@@ -8,7 +8,7 @@ import "react-html5video/dist/styles.css";
 import vid from "../../assets/ff.mp4";
 import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
-import Footer from '../Footer';
+import Footer from "../Footer";
 import NavBar from "../Navbar";
 
 const index = () => {
@@ -147,21 +147,18 @@ const index = () => {
                   Adane International Hotel
                 </Typography>
                 <Typography variant="body1" align="center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Fugit odio sint veniam recusandae commodi quasi voluptate?
-                  Repudiandae quo ipsam non perferendis. Eligendi at modi eaque
-                  error temporibus dolorem eveniet ipsa. Lorem ipsum dolor sit,
-                  amet consectetur adipisicing elit. Fugit odio sint veniam
-                  recusandae commodi quasi voluptate? Repudiandae quo ipsam non
-                  perferendis. Eligendi at modi eaque error temporibus dolorem
-                  eveniet ipsa. Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Fugit odio sint veniam recusandae commodi
-                  quasi voluptate? Repudiandae quo ipsam non perferendis.
-                  Eligendi at modi eaque error temporibus dolorem eveniet
-                  ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Fugit odio sint veniam recusandae commodi quasi voluptate?
-                  Repudiandae quo ipsam non perferendis. Eligendi at modi eaque
-                  error temporibus dolorem eveniet ipsa.
+                  Our hotel's slogan, "Designed for Relaxation," encapsulates
+                  our commitment to providing our guests with a serene and
+                  peaceful environment to unwind and recharge. We understand the
+                  importance of taking a break from the stresses of everyday
+                  life, and our hotel is designed to help you do just that. From
+                  our tranquil rooms to our on-site amenities, we strive to
+                  create a calming atmosphere that will leave you feeling
+                  refreshed and rejuvenated. Whether you are traveling for
+                  business or pleasure, our goal is to provide you with a
+                  comfortable and stress-free experience that will leave you
+                  looking forward to your next visit. Come stay with us and
+                  discover what true relaxation feels like.
                 </Typography>
               </Grid>
             </Grid>
@@ -169,14 +166,10 @@ const index = () => {
         </div>
       </Suspense>
       <div>
-        <Grid container justifyContent='center'>
-        <Typography
-                  variant="h3"
-                  align="center"
-                  className="about-text-title"
-                >
-                A Place, Where Comfort Meets Elegancy
-                </Typography>
+        <Grid container justifyContent="center">
+          <Typography variant="h3" align="center" className="about-text-title">
+            A Place, Exquisitely Designed for Relaxation
+          </Typography>
         </Grid>
         {!isOpen ? (
           <div className="play-image">
@@ -188,20 +181,20 @@ const index = () => {
         ) : null}
         {isOpen ? (
           <div>
-          <div className="popup-overlay">
-            <div className="close-icon" onClick={handleClosePopup}>
-              <FaTimes />
+            <div className="popup-overlay">
+              <div className="close-icon" onClick={handleClosePopup}>
+                <FaTimes />
+              </div>
+              <Video
+                autoPlay
+                loop
+                muted
+                controls={["PlayPause", "Seek", "Time", "Volume", "Fullscreen"]}
+                poster={thumbnail}
+              >
+                <source src={vid} type="video/mp4" />
+              </Video>
             </div>
-            <Video
-              autoPlay
-              loop
-              muted
-              controls={["PlayPause", "Seek", "Time", "Volume", "Fullscreen"]}
-              poster={thumbnail}
-            >
-              <source src={vid} type="video/mp4" />
-            </Video>
-          </div>
           </div>
         ) : null}
       </div>

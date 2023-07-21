@@ -18,6 +18,7 @@ import h from "../../assets/1.jpg";
 import j from "../../assets/2.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -201,7 +202,7 @@ const index = () => {
 >
   <CardMedia
     component="img"
-    height="280" // Increase the height of the CardMedia here
+    height="280" 
     image={card.image}
     alt={card.title}
   />
