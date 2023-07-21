@@ -9,6 +9,7 @@ import vid from "../../assets/ff.mp4";
 import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
 import Footer from '../Footer';
+import NavBar from "../Navbar";
 
 const index = () => {
   const tl = useRef();
@@ -68,6 +69,7 @@ const index = () => {
 
   return (
     <div style={{ overflowX: "hidden", overflowy: "auto", height: "100vh" }}>
+      <NavBar />
       <Suspense fallback={<Loader />}>
         <div className="images">
           <div className="main-title">

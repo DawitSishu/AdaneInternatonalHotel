@@ -1,6 +1,6 @@
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import { Box } from "@mui/material";
@@ -123,9 +123,8 @@ export default function Footer() {
           >
             {"Copyright © "}
             <Link
-              color="inherit"
-              href="https://your-website.com/"
-              sx={{ textDecoration: "none", fontWeight: "bold", color: "gold" }}
+              to="/"
+              style={{ textDecoration: "none", fontWeight: "bold", color: "gold" }}
             >
               Adane International Hotel
             </Link>{" "}

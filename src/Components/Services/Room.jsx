@@ -7,8 +7,6 @@ import StarIcon from '@mui/icons-material/Star';
 const RoomPage = ({roomData}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Replace these with your actual image URLs
-//   const mainImage = h;
 
    const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % roomData.images.length);

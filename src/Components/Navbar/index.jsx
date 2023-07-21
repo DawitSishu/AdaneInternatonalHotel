@@ -3,6 +3,7 @@ import homeImg from "../../assets/o.png";
 import bg from "../../assets/o.png";
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,7 +81,9 @@ const NavBar = () => {
       </div>
       <div className="menu">
         <br />
+          <Link to="/">
         <div className="menu__item">
+           
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Home
           </h5>
@@ -91,6 +94,9 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+         
+        </Link>
+        <Link to="/about">
         <div className="menu__item">
           <h5 className="menu__item-link" style={{ color: "white" }}>
             The Hotel
@@ -105,6 +111,8 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        </Link>
+        <Link to="/gallery">
         <div className="menu__item">
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Gallery
@@ -119,6 +127,8 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        </Link>
+        <Link to="/services">
         <div className="menu__item">
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Services
@@ -133,6 +143,8 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        </Link>
+        <Link to="/special-offers">
         <div className="menu__item">
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Special Offers
@@ -147,6 +159,9 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        </Link>
+        <Link to="/Contact">
+
         <div className="menu__item">
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Contact
@@ -160,6 +175,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        </Link>
       </div>
     </>
   );

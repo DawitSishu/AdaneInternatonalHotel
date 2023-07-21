@@ -4,10 +4,12 @@ import image from "../../assets/h.jpg";
 import { Grid, Typography, Container, Box } from "@mui/material";
 import ContactForm from "./ContactForm";
 import Footer from "../Footer";
+import NavBar from "../Navbar";
 
 const index = () => {
   return (
     <div>
+      <NavBar />
       <Grid
         container
         spacing={0}
