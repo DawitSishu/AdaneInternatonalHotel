@@ -187,6 +187,7 @@ const index = () => {
           </div>
         ) : null}
         {isOpen ? (
+          <div>
           <div className="popup-overlay">
             <div className="close-icon" onClick={handleClosePopup}>
               <FaTimes />
@@ -200,6 +201,7 @@ const index = () => {
             >
               <source src={vid} type="video/mp4" />
             </Video>
+          </div>
           </div>
         ) : null}
       </div>
