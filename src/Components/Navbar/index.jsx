@@ -1,6 +1,10 @@
 import "./style.css";
-import homeImg from "../../assets/o.png";
-import bg from "../../assets/o.png";
+import home from "../../assets/home.png";
+import about from "../../assets/about.png";
+import contact from "../../assets/contact.png";
+import gallery from "../../assets/gallery.png";
+import service from "../../assets/service.png";
+import special from "../../assets/special.png";
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
@@ -87,7 +91,7 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Home
           </h5>
-          <img className="menu__item-img" src={homeImg} />
+          <img className="menu__item-img" src={home} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>Home - Home - Home - Home - Home - Home - Home</span>
@@ -101,7 +105,7 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             The Hotel
           </h5>
-          <img className="menu__item-img" src={bg} />
+          <img className="menu__item-img" src={about} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -117,7 +121,7 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Gallery
           </h5>
-          <img className="menu__item-img" src={bg} />
+          <img className="menu__item-img" src={gallery} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -133,7 +137,7 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Services
           </h5>
-          <img className="menu__item-img" src={bg} />
+          <img className="menu__item-img" src={service} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -149,7 +153,7 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Special Offers
           </h5>
-          <img className="menu__item-img" src={bg} />
+          <img className="menu__item-img" src={special} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -166,7 +170,7 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Contact
           </h5>
-          <img className="menu__item-img" src={bg} />
+          <img className="menu__item-img" src={contact} />
           <div className="marquee">
             <div className="marquee__inner">
               <span>
