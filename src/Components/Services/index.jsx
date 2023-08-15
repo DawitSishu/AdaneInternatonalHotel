@@ -1,4 +1,4 @@
-import React, { useState, useRef,useEffect } from "react";
+import React, { useState, useRef, useEffect, Suspense } from "react";
 import {
   Grid,
   Box,
@@ -13,11 +13,11 @@ import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import RoomPage from "./Room";
 import h from "../../assets/1.jpg";
 import j from "../../assets/2.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
-
+import { useTheme, useMediaQuery } from "@mui/material";
+import RoomPage from "./Room";
 
 const darkTheme = createTheme({
   palette: {
@@ -38,22 +38,6 @@ const darkTheme = createTheme({
 });
 
 const roomData = [
-  {
-    image: h,
-    description:
-      " This luxurious suite offers the ultimate experience in comfort and style. Relax in the full sofa set while enjoying the multi-channel television system, or catch up on work at the study desk with access to high-speed WiFi internet. Individual controlled air conditioning ensures your perfect temperature, and 24-hour room service is always available. Plus, enjoy hot drinks access right in your room.",
-    images: [h, j, h, j, h],
-    title: "LUXURY SUITE ROOM",
-    features: [
-      "24 hour room service",
-      "Study Desk",
-      "Acces to high speed WiFi internet",
-      "Individual controlled air conditionings",
-      "Full sofa set",
-      "Multi channel television system",
-      "Hot drinks access in the room",
-    ],
-  },
   {
     image: j,
     description:
@@ -103,6 +87,9 @@ const index = () => {
   const [idx, setIdx] = useState(0);
   const scrollToRef = useRef(null);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -114,7 +101,7 @@ const index = () => {
   };
 
   return (
-    <div style={{overflow:'hidden'}}>
+    <div style={{ overflow: "hidden" }}>
       <Navbar />
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
@@ -160,7 +147,12 @@ const index = () => {
             perfect experience for you.
           </Typography>
         </Grid>
-        <Grid container justifyContent="center" spacing={2} sx={{ marginTop: 3,marginBottom:3 }}>
+        <Grid
+          container
+          justifyContent="center"
+          spacing={2}
+          sx={{ marginTop: 3, marginBottom: 3 }}
+        >
           <Grid item xs={12}>
             <Typography variant="h3" align="center" color="primary">
               Comfortable Rooms
@@ -191,56 +183,60 @@ const index = () => {
           {roomData.map((card, index) => (
             <Grid item key={index}>
               <Card
-  sx={{
-    maxWidth: 450,
-    height: 550,
-    marginBottom: 5,
-    boxShadow: "0 2px 10px 0 rgba(255, 215, 0, 0.5)",
-    display: 'flex',
-    flexDirection: 'column',
-  }}
->
-  <CardMedia
-    component="img"
-    height="280" 
-    image={card.image}
-    alt={card.title}
-  />
-  <CardContent sx={{ flexGrow: 1 }}>
-    <Typography
-      gutterBottom
-      variant="h5"
-      component="div"
-      sx={{ color: "gold", fontWeight: "bold" }}
-    >
-      {card.title}
-    </Typography>
-    <Typography variant="body2" color="text.secondary">
-      {card.description}
-    </Typography>
-  </CardContent>
-  <CardActions>
-    <Button
-      variant="contained"
-      color="primary"
-      fullWidth
-      onClick={() => handleLoadMore(index)}
-    >
-      Show More
-    </Button>
-  </CardActions>
-</Card>
-
-
+                sx={{
+                  maxWidth: 450,
+                  height: 550,
+                  marginBottom: 5,
+                  boxShadow: "0 2px 10px 0 rgba(255, 215, 0, 0.5)",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    style={{ width: "100%", height: "50%" }}
+                    loading="lazy"
+                  />
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    sx={{ color: "gold", fontWeight: "bold" }}
+                  >
+                    {card.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {card.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    onClick={() => handleLoadMore(index)}
+                  >
+                    Show More
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
           ))}
         </Grid>
         <Grid ref={scrollToRef}>
           {showRoomPage ? <RoomPage roomData={roomData[idx]} /> : null}
         </Grid>
-        <Grid container spacing={2} justifyContent="center">
+        <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+          direction={isMobile ? "column-reverse" : "row"}
+        >
           <Grid item xs={12} md={6}>
             <Grid
+              item
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -287,6 +283,7 @@ const index = () => {
             <img
               src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
               alt="logp"
+              loading="lazy"
               style={{ width: "40%", height: "80%" }}
             />
           </Grid>
@@ -306,6 +303,7 @@ const index = () => {
             <img
               src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
               alt="logp"
+              loading="lazy"
               style={{ width: "40%", height: "80%" }}
             />
           </Grid>
@@ -343,7 +341,7 @@ const index = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={2} justifyContent="center" direction={isMobile ? "column-reverse" : "row"}>
           <Grid item xs={12} md={6}>
             <Grid
               sx={{
@@ -394,6 +392,7 @@ const index = () => {
             <img
               src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
               alt="logp"
+              loading="lazy"
               style={{ width: "40%", height: "80%" }}
             />
           </Grid>
@@ -413,6 +412,7 @@ const index = () => {
             <img
               src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
               alt="logp"
+              loading="lazy"
               style={{ width: "40%", height: "80%" }}
             />
           </Grid>

@@ -90,6 +90,7 @@ const index = () => {
                   src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
                   alt="song"
                   className="about-img"
+                  loading="lazy"
                 />
               </label>
               <label className="card" htmlFor="item-2" id="song-2">
@@ -97,6 +98,7 @@ const index = () => {
                   src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
                   alt="song"
                   className="about-img"
+                  loading="lazy"
                 />
               </label>
               <label className="card" htmlFor="item-3" id="song-3">
@@ -104,6 +106,7 @@ const index = () => {
                   src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
                   alt="song"
                   className="about-img"
+                  loading="lazy"
                 />
               </label>
             </div>
@@ -126,6 +129,7 @@ const index = () => {
                 src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
                 alt="logp"
                 style={{ width: "40%", height: "80%" }}
+                loading="lazy"
               />
             </Grid>
             <Grid item xs={12} md={6}>

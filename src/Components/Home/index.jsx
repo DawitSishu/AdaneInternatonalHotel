@@ -4,7 +4,6 @@ import { IconButton } from "@mui/material";
 import { VolumeOff, VolumeUp } from "@mui/icons-material";
 import background from "../../assets/homevid.mp4";
 import "./style.css";
-import Loader from "../Loader";
 import Logo from "../../assets/logo.png";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 const darkTheme = createTheme({
@@ -76,8 +75,6 @@ const Home = ({stop}) => {
           )}
         </IconButton>
       </div>
-        {/* Responsive Image */}
-        
         <Grid container justifyContent="center">
         <Box sx={{ width: '100%', maxWidth: '500px',position: 'fixed',
             top: '50%',
@@ -85,7 +82,7 @@ const Home = ({stop}) => {
             transform: 'translate(-50%, -50%)',
             zIndex: 99,
             fontSize: '32px',}}>
-          <img src={Logo} alt="Your Image" style={{ width: '100%', height: 'auto' }} />
+          <img src={Logo} alt="Your Image" style={{ width: '100%', height: 'auto' }} loading="lazy" />
         </Box>
           <Button
             variant="outlined"
@@ -103,7 +100,6 @@ const Home = ({stop}) => {
             Skip & continue
           </Button>
         </Grid>
-      {/* </Box> */}
       </ThemeProvider>
     </div>
   );

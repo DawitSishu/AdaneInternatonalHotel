@@ -89,6 +89,7 @@ const index = () => {
           <img
             src={data.img}
             style={{ width: "auto", maxWidth: "90%", maxHeight: "90%" }}
+            loading="lazy"
           />
         </div>
       ) : null}
@@ -111,6 +112,7 @@ const index = () => {
                 style={{ width: "100%", display: "block" }}
                 alt=""
                 onClick={() => viewImage(image, i)}
+                loading="lazy"
               />
             ))}
           </Masonry>
