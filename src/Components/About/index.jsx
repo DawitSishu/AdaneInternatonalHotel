@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import Loader from "../Loader";
 import { DefaultPlayer as Video } from "react-html5video";
 import "react-html5video/dist/styles.css";
-import vid from "../../assets/ff.mp4";
+import vid from "../../assets/homevid.mp4";
 import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
 import Footer from "../Footer";
