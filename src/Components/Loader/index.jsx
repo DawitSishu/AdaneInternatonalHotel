@@ -15,11 +15,6 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className="loader">
-        <div className="scanner">
-          <span>Loading...</span>
-        </div>
-      </div>
     </div>
   );
 };
