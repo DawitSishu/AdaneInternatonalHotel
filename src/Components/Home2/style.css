@@ -13,9 +13,14 @@
   
 .box-container {
     position: relative;
+    min-height: 300px;
+    max-height: 300px;
     border: 2px solid gold;
     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
   }
   

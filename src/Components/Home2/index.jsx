@@ -9,6 +9,8 @@ import {
 import React, { useEffect } from "react";
 import "./style.css";
 import image from "../../assets/h.jpg";
+import anniversary from "../../assets/aniverary.jpg";
+import honeymoon from "../../assets/honeymoon.jpg";
 import { FaPlus } from "react-icons/fa";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
@@ -123,7 +125,7 @@ const index = () => {
             <Grid item xs={12} sm={4}>
               <Box className="box-container">
                 <img
-                  src={image}
+                  src={anniversary}
                   alt="Your Image"
                   className="box-image"
                   loading="lazy"
@@ -136,13 +138,13 @@ const index = () => {
             <Grid item xs={12} sm={4}>
               <Box className="box-container">
                 <img
-                  src={image}
+                  src={honeymoon}
                   alt="Your Image"
                   className="box-image"
                   loading="lazy"
                 />
                 <div className="box-overlay">
-                  <div className="box-text">Special Occasions</div>
+                  <div className="box-text">Romantic Anniversary</div>
                 </div>
               </Box>
             </Grid>
@@ -207,7 +209,7 @@ const index = () => {
                 marginBottom: 3,
               }}
             >
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} md={4}>
                 <Box className="box-txt">
                   <Grid item xs={12}>
                     <Typography variant="h3" align="center">
@@ -229,15 +231,14 @@ const index = () => {
                         attentive staff who are dedicated to making your visit
                         memorable. The menu offers a wide variety of expertly
                         prepared dishes using only the freshest ingredients. Our
-                        comfortable and inviting atmosphere makes Adane
-                        International Hotel the perfect place to enjoy a meal
-                        with loved ones or celebrate a special occasion.
+                        comfortable and inviting atmosphere makes our Hotel the
+                        perfect place to enjoy a meal with loved ones.
                       </Typography>
                     </Box>
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} md={4}>
                 <Box className="box-txt">
                   <Grid item xs={12}>
                     <Typography variant="h3" align="center">
@@ -267,7 +268,7 @@ const index = () => {
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} md={4}>
                 <Box className="box-txt">
                   <Grid item xs={12}>
                     <Typography variant="h3" align="center">
