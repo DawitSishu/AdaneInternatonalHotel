@@ -228,6 +228,59 @@ const index = () => {
         <Grid ref={scrollToRef}>
           {showRoomPage ? <RoomPage roomData={roomData[idx]} /> : null}
         </Grid>
+        <Grid container spacing={2} justifyContent="center">
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            className="logo"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="logp"
+              loading="lazy"
+              style={{ width: "40%", height: "80%" }}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: 5,
+              }}
+              className="about-content-text"
+            >
+              <Typography
+                variant="h3"
+                align="center"
+                className="about-text-title"
+                color="primary"
+              >
+                Club
+              </Typography>
+              <Typography variant="body1" align="center">
+                Experience an unforgettable nightlife at our club. Let the
+                pulsating beats and dazzling lights transport you to a world of
+                excitement. Sip on expertly crafted cocktails while surrounded
+                by a stylish ambiance. Dance, socialize, and create memories
+                that will last a lifetime. Join us and elevate your night out to
+                extraordinary heights.Indulge in the electrifying energy of our
+                club as our talented DJs spin the hottest tracks, keeping the
+                dance floor alive all night long. With a diverse crowd and
+                exceptional service, our club sets the stage for an
+                unforgettable night of fun and celebration.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
         <Grid
           container
           spacing={2}
@@ -341,7 +394,12 @@ const index = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container spacing={2} justifyContent="center" direction={isMobile ? "column-reverse" : "row"}>
+        <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+          direction={isMobile ? "column-reverse" : "row"}
+        >
           <Grid item xs={12} md={6}>
             <Grid
               sx={{
