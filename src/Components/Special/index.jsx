@@ -4,6 +4,8 @@ import image from "../../assets/h.jpg";
 import "./style.css";
 import { Card, CardContent, CardMedia } from "@mui/material";
 import h from "../../assets/h.jpg";
+import honeymoon from "../../assets/honeymoon.jpg";
+import anniversary from "../../assets/aniverary.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import Navbar from '../Navbar';
 import Footer from '../Footer';
@@ -34,12 +36,12 @@ const cardsData = [
       "Indulge in the ultimate wedding experience with our Luxury Wedding package. Our professional team will handle every detail to ensure that your special day is unforgettable. With access to exclusive facilities and services, your dream wedding will become a reality. ",
   },
   {
-    image: h,
+    image: honeymoon,
     title: "Ultimate Honeymoon",
     description: "Experience the ultimate in romantic luxury with our Elite Honeymoon package.  With the Elite Honeymoon package, you can celebrate your love in style and sophistication, and make your honeymoon dreams a reality. Create memories that will last a lifetime with this unforgettable honeymoon experience.",
   },
   {
-    image: h,
+    image: anniversary,
     title: "Romantic Anniversary ",
     description: "Celebrate your love and rekindle the romance with our Romantic Anniversary package.Whether you're celebrating your first anniversary or your 50th, our Romantic Anniversary package is the perfect way to create lasting memories with the one you love.",
   },
