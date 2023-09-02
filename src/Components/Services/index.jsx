@@ -4,7 +4,6 @@ import {
   Box,
   Typography,
   Card,
-  CardMedia,
   CardContent,
   Button,
   CardActions,
@@ -18,6 +17,7 @@ import j from "../../assets/2.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 import RoomPage from "./Room";
+import LazyLoad from "react-lazyload";
 
 const darkTheme = createTheme({
   palette: {
@@ -193,12 +193,14 @@ const index = () => {
                 }}
               >
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    style={{ width: "100%", height: "50%" }}
-                    loading="lazy"
-                  />
+                  <LazyLoad offset={100}>
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      style={{ width: "100%", height: "50%" }}
+                      loading="lazy"
+                    />
+                  </LazyLoad>
                   <Typography
                     gutterBottom
                     variant="h5"
@@ -240,12 +242,14 @@ const index = () => {
             }}
             className="logo"
           >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
+            <LazyLoad offset={100}>
+              <img
+                src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="logp"
+                loading="lazy"
+                style={{ width: "40%", height: "80%" }}
+              />
+            </LazyLoad>
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid
@@ -333,12 +337,14 @@ const index = () => {
             }}
             className="logo"
           >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
+            <LazyLoad offset={100}>
+              <img
+                src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="logp"
+                loading="lazy"
+                style={{ width: "40%", height: "80%" }}
+              />
+            </LazyLoad>
           </Grid>
         </Grid>
         <Grid container spacing={2} justifyContent="center">
@@ -353,12 +359,14 @@ const index = () => {
             }}
             className="logo"
           >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
+            <LazyLoad offset={100}>
+              <img
+                src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="logp"
+                loading="lazy"
+                style={{ width: "40%", height: "80%" }}
+              />
+            </LazyLoad>
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid
@@ -447,12 +455,14 @@ const index = () => {
             }}
             className="logo"
           >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
+            <LazyLoad offset={100}>
+              <img
+                src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="logp"
+                loading="lazy"
+                style={{ width: "40%", height: "80%" }}
+              />
+            </LazyLoad>
           </Grid>
         </Grid>
         <Grid container spacing={2} justifyContent="center">
@@ -467,12 +477,14 @@ const index = () => {
             }}
             className="logo"
           >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
+            <LazyLoad offset={100}>
+              <img
+                src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="logp"
+                loading="lazy"
+                style={{ width: "40%", height: "80%" }}
+              />
+            </LazyLoad>
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid

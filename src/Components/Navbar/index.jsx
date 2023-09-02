@@ -8,6 +8,7 @@ import special from "../../assets/special.png";
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,7 +92,9 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Home
           </h5>
-          <img className="menu__item-img" src={home} />
+          <LazyLoad offset={100}>
+          <img className="menu__item-img" src={home}  loading="lazy"/>
+          </LazyLoad>
           <div className="marquee">
             <div className="marquee__inner">
               <span>Home - Home - Home - Home - Home - Home - Home</span>
@@ -105,7 +108,9 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             The Hotel
           </h5>
-          <img className="menu__item-img" src={about} />
+          <LazyLoad offset={100}>
+          <img className="menu__item-img" src={about} loading="lazy" />
+          </LazyLoad>
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -121,7 +126,9 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Gallery
           </h5>
-          <img className="menu__item-img" src={gallery} />
+          <LazyLoad offset={100}>
+          <img className="menu__item-img" src={gallery} loading="lazy" />
+          </LazyLoad>
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -137,7 +144,9 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Services
           </h5>
-          <img className="menu__item-img" src={service} />
+          <LazyLoad offset={100}>
+          <img className="menu__item-img" src={service} loading="lazy"/>
+          </LazyLoad>
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -153,7 +162,9 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Special Offers
           </h5>
-          <img className="menu__item-img" src={special} />
+          <LazyLoad offset={100}>
+          <img className="menu__item-img" src={special} loading="lazy" />
+          </LazyLoad>
           <div className="marquee">
             <div className="marquee__inner">
               <span>
@@ -170,7 +181,9 @@ const NavBar = () => {
           <h5 className="menu__item-link" style={{ color: "white" }}>
             Contact
           </h5>
-          <img className="menu__item-img" src={contact} />
+          <LazyLoad offset={100}>
+          <img className="menu__item-img" src={contact} loading="lazy" />
+          </LazyLoad>
           <div className="marquee">
             <div className="marquee__inner">
               <span>

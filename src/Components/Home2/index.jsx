@@ -20,6 +20,7 @@ import LocalParkingIcon from "@mui/icons-material/LocalParking";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 
 const darkTheme = createTheme({
   palette: {
@@ -111,12 +112,14 @@ const index = () => {
           >
             <Grid item xs={12} sm={4}>
               <Box className="box-container">
-                <img
-                  src={image}
-                  alt="Your Image"
-                  className="box-image"
-                  loading="lazy"
-                />
+                <LazyLoad height={200} offset={100}>
+                  <img
+                    src={image}
+                    alt="Your Image"
+                    className="box-image"
+                    loading="lazy"
+                  />
+                </LazyLoad>
                 <div className="box-overlay">
                   <div className="box-text">Luxury Wedding</div>
                 </div>
@@ -124,12 +127,14 @@ const index = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box className="box-container">
-                <img
-                  src={anniversary}
-                  alt="Your Image"
-                  className="box-image"
-                  loading="lazy"
-                />
+                <LazyLoad height={200} offset={100}>
+                  <img
+                    src={anniversary}
+                    alt="Your Image"
+                    className="box-image"
+                    loading="lazy"
+                  />
+                </LazyLoad>
                 <div className="box-overlay">
                   <div className="box-text">Ultimate Honeymoon</div>
                 </div>
@@ -137,12 +142,14 @@ const index = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box className="box-container">
-                <img
-                  src={honeymoon}
-                  alt="Your Image"
-                  className="box-image"
-                  loading="lazy"
-                />
+                <LazyLoad height={200} offset={100}>
+                  <img
+                    src={honeymoon}
+                    alt="Your Image"
+                    className="box-image"
+                    loading="lazy"
+                  />
+                </LazyLoad>
                 <div className="box-overlay">
                   <div className="box-text">Romantic Anniversary</div>
                 </div>
@@ -358,12 +365,14 @@ const index = () => {
             >
               <Grid item xs={12} sm={4}>
                 <Box className="box-container">
-                  <img
-                    src={image}
-                    alt="Your Image"
-                    className="box-image"
-                    loading="lazy"
-                  />
+                  <LazyLoad height={200} offset={100}>
+                    <img
+                      src={image}
+                      alt="Your Image"
+                      className="box-image"
+                      loading="lazy"
+                    />
+                  </LazyLoad>
                   <div className="box-overlay">
                     <div className="box-text">Lounge</div>
                   </div>
@@ -371,12 +380,14 @@ const index = () => {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box className="box-container">
-                  <img
-                    src={image}
-                    alt="Your Image"
-                    className="box-image"
-                    loading="lazy"
-                  />
+                  <LazyLoad height={200} offset={100}>
+                    <img
+                      src={image}
+                      alt="Your Image"
+                      className="box-image"
+                      loading="lazy"
+                    />
+                  </LazyLoad>
                   <div className="box-overlay">
                     <div className="box-text">Bar</div>
                   </div>
@@ -384,12 +395,14 @@ const index = () => {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <Box className="box-container">
-                  <img
-                    src={image}
-                    alt="Your Image"
-                    className="box-image"
-                    loading="lazy"
-                  />
+                  <LazyLoad height={200} offset={100}>
+                    <img
+                      src={image}
+                      alt="Your Image"
+                      className="box-image"
+                      loading="lazy"
+                    />
+                  </LazyLoad>
                   <div className="box-overlay">
                     <div className="box-text">Resturant</div>
                   </div>
@@ -439,15 +452,17 @@ const index = () => {
               sx={{ height: "60vh", paddingRight: 2 }}
             >
               <Box sx={{ width: "100%", height: "100%" }} className="home-map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.958406780044!2d41.84623727511885!3d9.598849990487015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631018ef6cf08e7%3A0xd8cdd0828ca57800!2z4Yqg4Yuz4YqQIOGIhuGJtOGIjSBIb3RlbCBBZGFuZQ!5e0!3m2!1sen!2set!4v1689189837125!5m2!1sen!2set&maptype=dark"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, filter: "invert(90%)" }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <LazyLoad height={200} offset={100}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.958406780044!2d41.84623727511885!3d9.598849990487015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631018ef6cf08e7%3A0xd8cdd0828ca57800!2z4Yqg4Yuz4YqQIOGIhuGJtOGIjSBIb3RlbCBBZGFuZQ!5e0!3m2!1sen!2set!4v1689189837125!5m2!1sen!2set&maptype=dark"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, filter: "invert(90%)" }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </LazyLoad>
               </Box>
             </Grid>
 

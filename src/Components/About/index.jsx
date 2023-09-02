@@ -10,6 +10,7 @@ import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
+import LazyLoad from "react-lazyload";
 
 const index = () => {
   const tl = useRef();
@@ -196,6 +197,7 @@ const index = () => {
         {!isOpen ? (
           <div className="play-image">
             <img src={thumbnail} alt="Play Video" />
+
             <div className="play-button-overlay" onClick={handleOpenPopup}>
               <FaPlay />
             </div>
@@ -208,6 +210,7 @@ const index = () => {
                 <FaTimes />
               </div>
             </div>
+            <div className="video-container">
             <Video
               autoPlay
               loop
@@ -216,6 +219,7 @@ const index = () => {
             >
               <source src={vid} type="video/mp4" />
             </Video>
+            </div>
           </div>
         ) : null}
       </div>
