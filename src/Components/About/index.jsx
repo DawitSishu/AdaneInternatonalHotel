@@ -10,7 +10,8 @@ import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
-import LazyLoad from "react-lazyload";
+import hotelmain from "../../assets/about/hotelMain.jpg"
+
 
 const index = () => {
   const tl = useRef();
@@ -127,9 +128,9 @@ const index = () => {
               className="logo"
             >
               <img
-                src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                src={hotelmain}
                 alt="logp"
-                style={{ width: "40%", height: "80%" }}
+                style={{ width: "75%", height: "80%" }}
                 loading="lazy"
               />
             </Grid>
