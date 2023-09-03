@@ -170,7 +170,7 @@ export default function Footer() {
           >
             {"Photography, videography & Editing - "}
             <a
-              href="https://www.linkedin.com/in/dawit-sishu-309ab1241/"
+              href="https://www.linkedin.com/in/fares-yigeremu-39ab87271/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
