@@ -148,7 +148,7 @@ const index = () => {
           <Masonry gutter="20px">
             {images.map((image, i) => {
               return i <= 5 ? (
-                <LazyLoad offset={100}>
+                <LazyLoad offset={100} key={i}>
                   <img
                     key={i}
                     src={image}
@@ -171,7 +171,7 @@ const index = () => {
           <Masonry gutter="20px">
             {images.map((image, i) => {
               return 10 < i && i <= 16 ? (
-                <LazyLoad offset={100}>
+                <LazyLoad offset={100} key={i}>
                   <img
                     key={i}
                     src={image}
@@ -194,7 +194,7 @@ const index = () => {
           <Masonry gutter="20px">
             {images.map((image, i) => {
               return 16 < i && i <= 22 ? (
-                <LazyLoad offset={100}>
+                <LazyLoad offset={100} key={i}>
                   <img
                     key={i}
                     src={image}
@@ -217,7 +217,7 @@ const index = () => {
           <Masonry gutter="20px">
             {images.map((image, i) => {
               return 5 < i && i <= 10 ? (
-                <LazyLoad offset={100}>
+                <LazyLoad offset={100} key={i}>
                   <img
                     key={i}
                     src={image}
