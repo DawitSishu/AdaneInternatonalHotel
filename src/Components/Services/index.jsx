@@ -19,6 +19,7 @@ import { useTheme, useMediaQuery } from "@mui/material";
 import RoomPage from "./Room";
 import Bar from "../../assets/services/bar.jpg";
 import Foods from "../../assets/services/Foods.jpg";
+import Resaurant from "../../assets/services/Resaurant.jpg";
 
 const darkTheme = createTheme({
   palette: {
@@ -335,10 +336,10 @@ const index = () => {
             className="logo"
           >
             <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              src={Resaurant}
               alt="logp"
               loading="lazy"
-              style={{ width: "40%", height: "80%" }}
+              style={{ width: "70%", height: "80%" }}
             />
           </Grid>
         </Grid>
@@ -452,64 +453,8 @@ const index = () => {
               src={Foods}
               alt="logp"
               loading="lazy"
-              style={{ width: "60%", height: "60%" }}
+              style={{ width: "50%", height: "70%" }}
             />
-          </Grid>
-        </Grid>
-        <Grid container spacing={2} justifyContent="center">
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            className="logo"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Grid
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                padding: 5,
-              }}
-              className="about-content-text"
-            >
-              <Typography
-                variant="h3"
-                align="center"
-                className="about-text-title"
-                color="primary"
-              >
-                Reception and Security
-              </Typography>
-              <Typography variant="body1" align="center">
-                Our hotel offers 24-hour reception and security service,
-                ensuring that guests have access to assistance and support
-                around the clock. The reception staff are always available to
-                help with any needs or requests, whether it is checking in or
-                out, arranging transportation, or providing recommendations for
-                local attractions. Additionally, the hotel has a dedicated
-                security team that is available at all times to ensure the
-                safety and security of guests and their belongings. With
-                state-of-the-art security systems and trained personnel, guests
-                can be assured of a safe and secure stay. The combination of
-                round-the-clock reception and security services provides guests
-                with peace of mind and a worry-free experience during their stay
-                at Adane International Hotel.
-              </Typography>
-            </Grid>
           </Grid>
         </Grid>
       </ThemeProvider>
