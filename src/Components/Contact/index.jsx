@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./style.css";
-import image from "../../assets/h.jpg";
-import { Grid, Typography, Container, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import ContactForm from "./ContactForm";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
+import img2 from "../../assets/about/about1.jpg";
+
 
 const index = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const index = () => {
         sx={{
           position: "relative",
           maxHeight: "50vh",
-          backgroundImage: `url(${image})`,
+          backgroundImage: `url(${img2})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",

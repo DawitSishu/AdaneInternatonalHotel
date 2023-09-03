@@ -6,16 +6,13 @@ import IconButton from "@mui/material/IconButton";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import CloseIcon from "@mui/icons-material/Close";
-import h from "../../assets/h.jpg";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import LazyLoad from "react-lazyload";
 
 const images = [
-  h,
   "https://picsum.photos/200/300",
   "https://picsum.photos/300/300",
-  h,
   "https://picsum.photos/3000/3000",
   "https://picsum.photos/3000/3000",
   "https://picsum.photos/300/500",
