@@ -4,7 +4,6 @@ import {
   Box,
   Typography,
   Card,
-  CardMedia,
   CardContent,
   Button,
   CardActions,
@@ -18,7 +17,8 @@ import j from "../../assets/2.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 import RoomPage from "./Room";
-import LazyLoad from "react-lazyload";
+import Bar from "../../assets/services/bar.jpg";
+import Foods from "../../assets/services/Foods.jpg";
 
 const darkTheme = createTheme({
   palette: {
@@ -355,10 +355,10 @@ const index = () => {
             className="logo"
           >
             <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              src={Bar}
               alt="logp"
               loading="lazy"
-              style={{ width: "40%", height: "80%" }}
+              style={{ width: "70%", height: "80%" }}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -449,10 +449,10 @@ const index = () => {
             className="logo"
           >
             <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              src={Foods}
               alt="logp"
               loading="lazy"
-              style={{ width: "40%", height: "80%" }}
+              style={{ width: "60%", height: "60%" }}
             />
           </Grid>
         </Grid>

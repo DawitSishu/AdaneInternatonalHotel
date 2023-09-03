@@ -8,7 +8,6 @@ import special from "../../assets/special.png";
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazyload";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +18,17 @@ const NavBar = () => {
       paused: true,
     });
 
-    tl.current.fromTo(".menu",{
-      opacity: 0,
-    }, {
-      top: 0,
-      opacity: 1,
-      duration: 0.5,
-    });
+    tl.current.fromTo(
+      ".menu",
+      {
+        opacity: 0,
+      },
+      {
+        top: 0,
+        opacity: 1,
+        duration: 0.5,
+      }
+    );
     tl.current.to(
       ".line1",
       {
@@ -86,112 +89,98 @@ const NavBar = () => {
       </div>
       <div className="menu">
         <br />
-          <Link to="/">
-        <div className="menu__item">
-           
-          <h5 className="menu__item-link" style={{ color: "white" }}>
-            Home
-          </h5>
-          <LazyLoad offset={100}>
-          <img className="menu__item-img" src={home}  loading="lazy"/>
-          </LazyLoad>
-          <div className="marquee">
-            <div className="marquee__inner">
-              <span>Home - Home - Home - Home - Home - Home - Home</span>
+        <Link to="/">
+          <div className="menu__item">
+            <h5 className="menu__item-link" style={{ color: "white" }}>
+              Home
+            </h5>
+            <img className="menu__item-img" src={home} loading="lazy" />
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>Home - Home - Home - Home - Home - Home - Home</span>
+              </div>
             </div>
           </div>
-        </div>
-         
         </Link>
         <Link to="/about">
-        <div className="menu__item">
-          <h5 className="menu__item-link" style={{ color: "white" }}>
-            The Hotel
-          </h5>
-          <LazyLoad offset={100}>
-          <img className="menu__item-img" src={about} loading="lazy" />
-          </LazyLoad>
-          <div className="marquee">
-            <div className="marquee__inner">
-              <span>
-                The Hotel - The Hotel - The Hotel - The Hotel - The Hotel - The Hotel -
-                The Hotel
-              </span>
+          <div className="menu__item">
+            <h5 className="menu__item-link" style={{ color: "white" }}>
+              The Hotel
+            </h5>
+            <img className="menu__item-img" src={about} loading="lazy" />
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>
+                  The Hotel - The Hotel - The Hotel - The Hotel - The Hotel -
+                  The Hotel - The Hotel
+                </span>
+              </div>
             </div>
           </div>
-        </div>
         </Link>
         <Link to="/gallery">
-        <div className="menu__item">
-          <h5 className="menu__item-link" style={{ color: "white" }}>
-            Gallery
-          </h5>
-          <LazyLoad offset={100}>
-          <img className="menu__item-img" src={gallery} loading="lazy" />
-          </LazyLoad>
-          <div className="marquee">
-            <div className="marquee__inner">
-              <span>
-                Gallery - Gallery - Gallery - Gallery - Gallery - Gallery -
-                Gallery
-              </span>
+          <div className="menu__item">
+            <h5 className="menu__item-link" style={{ color: "white" }}>
+              Gallery
+            </h5>
+            <img className="menu__item-img" src={gallery} loading="lazy" />
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>
+                  Gallery - Gallery - Gallery - Gallery - Gallery - Gallery -
+                  Gallery
+                </span>
+              </div>
             </div>
           </div>
-        </div>
         </Link>
         <Link to="/services">
-        <div className="menu__item">
-          <h5 className="menu__item-link" style={{ color: "white" }}>
-            Services
-          </h5>
-          <LazyLoad offset={100}>
-          <img className="menu__item-img" src={service} loading="lazy"/>
-          </LazyLoad>
-          <div className="marquee">
-            <div className="marquee__inner">
-              <span>
-                Services - Services - Services - Services - Services - Services -
-                Services
-              </span>
+          <div className="menu__item">
+            <h5 className="menu__item-link" style={{ color: "white" }}>
+              Services
+            </h5>
+            <img className="menu__item-img" src={service} loading="lazy" />
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>
+                  Services - Services - Services - Services - Services -
+                  Services - Services
+                </span>
+              </div>
             </div>
           </div>
-        </div>
         </Link>
         <Link to="/special-offers">
-        <div className="menu__item">
-          <h5 className="menu__item-link" style={{ color: "white" }}>
-            Special Offers
-          </h5>
-          <LazyLoad offset={100}>
-          <img className="menu__item-img" src={special} loading="lazy" />
-          </LazyLoad>
-          <div className="marquee">
-            <div className="marquee__inner">
-              <span>
-                Special Offers - Special Offers - Special Offers - Special Offers - Special Offers - Special Offers -
-                Special Offers
-              </span>
+          <div className="menu__item">
+            <h5 className="menu__item-link" style={{ color: "white" }}>
+              Special Offers
+            </h5>
+            <img className="menu__item-img" src={special} loading="lazy" />
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>
+                  Special Offers - Special Offers - Special Offers - Special
+                  Offers - Special Offers - Special Offers - Special Offers
+                </span>
+              </div>
             </div>
           </div>
-        </div>
         </Link>
         <Link to="/Contact">
-
-        <div className="menu__item">
-          <h5 className="menu__item-link" style={{ color: "white" }}>
-            Contact
-          </h5>
-          <LazyLoad offset={100}>
-          <img className="menu__item-img" src={contact} loading="lazy" />
-          </LazyLoad>
-          <div className="marquee">
-            <div className="marquee__inner">
-              <span>
-                Contact - Contact - Contact - Contact - Contact - Contact - Contact
-              </span>
+          <div className="menu__item">
+            <h5 className="menu__item-link" style={{ color: "white" }}>
+              Contact
+            </h5>
+            <img className="menu__item-img" src={contact} loading="lazy" />
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>
+                  Contact - Contact - Contact - Contact - Contact - Contact -
+                  Contact
+                </span>
+              </div>
             </div>
           </div>
-        </div>
         </Link>
       </div>
     </>
