@@ -8,7 +8,6 @@ import {
   Button,
   CardActions,
 } from "@mui/material";
-import backgroundImage from "../../assets/h.jpg";
 import "./style.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -20,6 +19,7 @@ import RoomPage from "./Room";
 import Bar from "../../assets/services/bar.jpg";
 import Foods from "../../assets/services/Foods.jpg";
 import Resaurant from "../../assets/services/Resaurant.jpg";
+import servemain from "../../assets/services/servemain.jpg";
 
 const darkTheme = createTheme({
   palette: {
@@ -116,7 +116,7 @@ const index = () => {
           sx={{
             position: "relative",
             minHeight: "40vh",
-            backgroundImage: `url(${backgroundImage})`,
+            backgroundImage: `url(${servemain})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
