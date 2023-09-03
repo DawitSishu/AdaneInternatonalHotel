@@ -33,26 +33,29 @@ export default function Footer() {
       <Container maxWidth="lg">
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4}>
-            <Typography
-              variant="h6"
-              color="text.primary"
-              gutterBottom
-              sx={{ color: "#fff", fontWeight: "bold" }}
-            >
-              About Us
-            </Typography>
+            <Link to="/about" style={{textDecoration:'none'}}>
+              <Typography
+                variant="h6"
+                color="text.primary"
+                gutterBottom
+                sx={{ color: "#fff", fontWeight: "bold" }}
+              >
+                About Us
+              </Typography>
+            </Link>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ color: "#fff" }}
             >
-             Our Hotel is dedicated to providing guests with a luxurious and
+              Our Hotel is dedicated to providing guests with a luxurious and
               personalized experience. With top-notch amenities and a committed
               staff, we strive to exceed expectations and make every stay as
               comfortable and enjoyable as possible.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
+          <Link to="/contact" style={{textDecoration:'none'}}>
             <Typography
               variant="h6"
               color="text.primary"
@@ -61,6 +64,7 @@ export default function Footer() {
             >
               Contact Us
             </Typography>
+            </Link>
             <Typography
               variant="body2"
               color="text.secondary"
@@ -124,12 +128,72 @@ export default function Footer() {
             {"Copyright © "}
             <Link
               to="/"
-              style={{ textDecoration: "none", fontWeight: "bold", color: "gold" }}
+              style={{
+                textDecoration: "none",
+                fontWeight: "bold",
+                color: "gold",
+              }}
             >
               Adane International Hotel
             </Link>{" "}
             {new Date().getFullYear()}
             {"."}
+          </Typography>
+        </Box>
+        <Box mt={2}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            align="center"
+            sx={{ color: "#fff" }}
+          >
+            {"Developed by - "}
+            <a
+              href="https://www.linkedin.com/in/dawit-sishu-309ab1241/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                fontWeight: "bold",
+                color: "gold",
+              }}
+            >
+              Dawit
+            </a>
+            {" , "}
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            align="center"
+            sx={{ color: "#fff" }}
+          >
+            {"Photography, videography & Editing - "}
+            <a
+              href="https://www.linkedin.com/in/dawit-sishu-309ab1241/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                fontWeight: "bold",
+                color: "gold",
+              }}
+            >
+              Faris
+            </a>
+            {" & "}
+            <a
+              href="https://www.linkedin.com/in/dawit-sishu-309ab1241/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                fontWeight: "bold",
+                color: "gold",
+              }}
+            >
+              Efrata
+            </a>
           </Typography>
         </Box>
       </Container>

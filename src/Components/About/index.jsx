@@ -75,7 +75,7 @@ const index = () => {
       <Suspense fallback={<Loader />}>
         <div className="images">
           <div className="main-title">
-            <h1>Welcome</h1>
+            <h1 style={{marginTop:"3px"}}>Welcome</h1>
             <br />
             <h1>To</h1>
             <br />
