@@ -20,6 +20,10 @@ import Bar from "../../assets/services/bar.jpg";
 import Foods from "../../assets/services/Foods.jpg";
 import Resaurant from "../../assets/services/Resaurant.jpg";
 import servemain from "../../assets/services/servemain.jpg";
+import twin1 from "../../assets/rooms/twin1.jpg";
+import twin2 from "../../assets/rooms/twin2.jpg";
+import twin3 from "../../assets/rooms/twin3.jpg";
+import twin4 from "../../assets/rooms/twin4.jpg";
 
 const darkTheme = createTheme({
   palette: {
@@ -55,10 +59,10 @@ const roomData = [
     ],
   },
   {
-    image: h,
+    image: twin1,
     description:
       "This cozy room is perfect for friends or family traveling together. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
-    images: [h, j, h, j, h],
+    images: [twin1, twin2, twin3, twin4],
     title: "TWIN BED",
     features: [
       "24 hour room service",
