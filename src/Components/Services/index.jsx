@@ -11,8 +11,6 @@ import {
 import "./style.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import h from "../../assets/1.jpg";
-import j from "../../assets/2.jpg";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 import RoomPage from "./Room";
@@ -24,6 +22,14 @@ import twin1 from "../../assets/rooms/twin1.jpg";
 import twin2 from "../../assets/rooms/twin2.jpg";
 import twin3 from "../../assets/rooms/twin3.jpg";
 import twin4 from "../../assets/rooms/twin4.jpg";
+import lux1 from "../../assets/rooms/lux1.jpg";
+import lux2 from "../../assets/rooms/lux2.jpg";
+import lux3 from "../../assets/rooms/lux3.jpg";
+import lux4 from "../../assets/rooms/lux4.jpg";
+import stand1 from "../../assets/rooms/stand1.jpg";
+import stand2 from "../../assets/rooms/stand2.jpg";
+import stand3 from "../../assets/rooms/stand3.jpg";
+import stand4 from "../../assets/rooms/stand4.jpg";
 
 const darkTheme = createTheme({
   palette: {
@@ -45,11 +51,11 @@ const darkTheme = createTheme({
 
 const roomData = [
   {
-    image: j,
+    image: lux1,
     description:
-      "Experience royal luxury in the Queen's Room. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
-    images: [h, j, h, j, h],
-    title: "QUEEN'S ROOM ",
+      "Experience royal luxury in the luxurious suite. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
+    images: [lux1, lux2, lux3, lux4],
+    title: "Luxurious Suite",
     features: [
       "24 hour room service",
       "Study Desk",
@@ -73,10 +79,10 @@ const roomData = [
     ],
   },
   {
-    image: j,
+    image: stand1,
     description:
       "This comfortable room offers all the amenities you need for a relaxing stay. Enjoy 24-hour room service and catch up on work at the study desk with multi-channel television system at your fingertips. Individual controlled air conditioning ensures your perfect temperature, and access to high-speed WiFi internet keeps you connected.",
-    images: [h, j, h, j, h],
+    images: [stand1, stand2, stand3, stand4],
     title: "STANDARD ROOM",
     features: [
       "24 hour room service",
@@ -156,7 +162,7 @@ const index = () => {
         <Grid
           container
           justifyContent="center"
-          spacing={2}
+          spacing={3}
           sx={{ marginTop: 3, marginBottom: 3 }}
         >
           <Grid item xs={12}>
@@ -187,7 +193,7 @@ const index = () => {
         </Grid>
         <Grid container justifyContent="center" spacing={4}>
           {roomData.map((card, index) => (
-            <Grid item key={index}>
+            <Grid item key={index} ml={2} mr={2}>
               <Card
                 sx={{
                   maxWidth: 450,
@@ -234,59 +240,7 @@ const index = () => {
         <Grid ref={scrollToRef}>
           {showRoomPage ? <RoomPage roomData={roomData[idx]} /> : null}
         </Grid>
-        <Grid container spacing={2} justifyContent="center">
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            className="logo"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-              alt="logp"
-              loading="lazy"
-              style={{ width: "40%", height: "80%" }}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Grid
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                padding: 5,
-              }}
-              className="about-content-text"
-            >
-              <Typography
-                variant="h3"
-                align="center"
-                className="about-text-title"
-                color="primary"
-              >
-                Club
-              </Typography>
-              <Typography variant="body1" align="center">
-                Experience an unforgettable nightlife at our club. Let the
-                pulsating beats and dazzling lights transport you to a world of
-                excitement. Sip on expertly crafted cocktails while surrounded
-                by a stylish ambiance. Dance, socialize, and create memories
-                that will last a lifetime. Join us and elevate your night out to
-                extraordinary heights.Indulge in the electrifying energy of our
-                club as our talented DJs spin the hottest tracks, keeping the
-                dance floor alive all night long. With a diverse crowd and
-                exceptional service, our club sets the stage for an
-                unforgettable night of fun and celebration.
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
+
         <Grid
           container
           spacing={2}
@@ -459,6 +413,59 @@ const index = () => {
               loading="lazy"
               style={{ width: "50%", height: "70%" }}
             />
+          </Grid>
+        </Grid>
+        <Grid container spacing={2} justifyContent="center">
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            className="logo"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="logp"
+              loading="lazy"
+              style={{ width: "40%", height: "80%" }}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: 5,
+              }}
+              className="about-content-text"
+            >
+              <Typography
+                variant="h3"
+                align="center"
+                className="about-text-title"
+                color="primary"
+              >
+                Club
+              </Typography>
+              <Typography variant="body1" align="center">
+                Experience an unforgettable nightlife at our club. Let the
+                pulsating beats and dazzling lights transport you to a world of
+                excitement. Sip on expertly crafted cocktails while surrounded
+                by a stylish ambiance. Dance, socialize, and create memories
+                that will last a lifetime. Join us and elevate your night out to
+                extraordinary heights.Indulge in the electrifying energy of our
+                club as our talented DJs spin the hottest tracks, keeping the
+                dance floor alive all night long. With a diverse crowd and
+                exceptional service, our club sets the stage for an
+                unforgettable night of fun and celebration.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       </ThemeProvider>
