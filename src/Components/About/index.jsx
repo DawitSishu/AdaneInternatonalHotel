@@ -10,8 +10,10 @@ import thumbnail from "../../assets/o.png";
 import { FaTimes, FaPlay } from "react-icons/fa";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
-import hotelmain from "../../assets/about/hotelMain.jpg"
-
+import hotelmain from "../../assets/about/hotelMain.jpg";
+import img1 from "../../assets/about/1.jpg";
+import img2 from "../../assets/about/about1.jpg";
+import img3 from "../../assets/about/about2.jpg";
 
 const index = () => {
   const tl = useRef();
@@ -75,7 +77,7 @@ const index = () => {
       <Suspense fallback={<Loader />}>
         <div className="images">
           <div className="main-title">
-            <h1 style={{marginTop:"3px"}}>Welcome</h1>
+            <h1 style={{ marginTop: "3px" }}>Welcome</h1>
             <br />
             <h1>To</h1>
             <br />
@@ -89,7 +91,7 @@ const index = () => {
             <div className="cards">
               <label className="card" htmlFor="item-1" id="song-1">
                 <img
-                  src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
+                  src={img2}
                   alt="song"
                   className="about-img"
                   loading="lazy"
@@ -97,7 +99,7 @@ const index = () => {
               </label>
               <label className="card" htmlFor="item-2" id="song-2">
                 <img
-                  src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                  src={img1}
                   alt="song"
                   className="about-img"
                   loading="lazy"
@@ -105,7 +107,7 @@ const index = () => {
               </label>
               <label className="card" htmlFor="item-3" id="song-3">
                 <img
-                  src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                  src={img3}
                   alt="song"
                   className="about-img"
                   loading="lazy"
@@ -175,19 +177,12 @@ const index = () => {
         <Typography variant="h3" align="center" className="about-text-title">
           A Message From The Manager
         </Typography>
-        <Typography variant="body1" align="center">
-          Our hotel's slogan, "Designed for Relaxation," encapsulates our
-          commitment to providing our guests with a serene and peaceful
-          environment to unwind and recharge. We understand the importance of
-          taking a break from the stresses of everyday life, and our hotel is
-          designed to help you do just that. From our tranquil rooms to our
-          on-site amenities, we strive to create a calming atmosphere that will
-          leave you feeling refreshed and rejuvenated. Whether you are traveling
-          for business or pleasure, our goal is to provide you with a
-          comfortable and stress-free experience that will leave you looking
-          forward to your next visit. Come stay with us and discover what true
-          relaxation feels like.
-        </Typography>
+        <img
+          src={hotelmain}
+          alt="logp"
+          style={{ width: "75%", height: "80%", margin: "15px" }}
+          loading="lazy"
+        />
       </Grid>
       <div>
         <Grid container justifyContent="center">
@@ -212,14 +207,14 @@ const index = () => {
               </div>
             </div>
             <div className="video-container">
-            <Video
-              autoPlay
-              loop
-              controls={["PlayPause", "Seek", "Time", "Volume", "Fullscreen"]}
-              poster={thumbnail}
-            >
-              <source src={vid} type="video/mp4" />
-            </Video>
+              <Video
+                autoPlay
+                loop
+                controls={["PlayPause", "Seek", "Time", "Volume", "Fullscreen"]}
+                poster={thumbnail}
+              >
+                <source src={vid} type="video/mp4" />
+              </Video>
             </div>
           </div>
         ) : null}
