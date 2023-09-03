@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import React, { useEffect } from "react";
 import "./style.css";
-import image from "../../assets/h.jpg";
 import anniversary from "../../assets/offers/aniverary.jpg";
 import honeymoon from "../../assets/offers/honeymoon.jpg";
 import { FaPlus } from "react-icons/fa";
@@ -25,6 +24,8 @@ import wedding from "../../assets/offers/wedding.jpg";
 import servemain from "../../assets/services/servemain.jpg";
 import bar from "../../assets/services/bar.jpg";
 import launge from "../../assets/gallery/launge.jpg";
+import hotelmain from "../../assets/about/hotelMain.jpg"
+
 
 const darkTheme = createTheme({
   palette: {
@@ -62,7 +63,7 @@ const index = () => {
           sx={{
             position: "relative",
             minHeight: "60vh",
-            backgroundImage: `url(${image})`,
+            backgroundImage: `url(${hotelmain})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
