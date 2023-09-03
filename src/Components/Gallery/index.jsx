@@ -9,16 +9,54 @@ import CloseIcon from "@mui/icons-material/Close";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import LazyLoad from "react-lazyload";
+import lux1 from "../../assets/rooms/lux1.jpg";
+import lux2 from "../../assets/rooms/lux2.jpg";
+import twin2 from "../../assets/rooms/twin2.jpg";
+import twin3 from "../../assets/rooms/twin3.jpg";
+import stand1 from "../../assets/rooms/stand1.jpg";
+import stand2 from "../../assets/rooms/stand2.jpg";
+import bar1 from "../../assets/gallery/bar1.jpg";
+import bar2 from "../../assets/gallery/bar2.jpg";
+import bar3 from "../../assets/gallery/bar3.jpg";
+import bar4 from "../../assets/gallery/bar4.jpg";
+import bar5 from "../../assets/gallery/bar5.jpg";
+import food1 from "../../assets/gallery/food1.jpg";
+import food3 from "../../assets/gallery/food3.jpg";
+import food4 from "../../assets/gallery/food4.jpg";
+import food5 from "../../assets/gallery/food5.jpg";
+import food7 from "../../assets/gallery/food7.jpg";
+import food8 from "../../assets/gallery/food8.jpg";
+import other1 from "../../assets/gallery/other1.jpg";
+import other2 from "../../assets/gallery/other2.jpg";
+import other3 from "../../assets/gallery/other3.jpg";
+import other4 from "../../assets/gallery/other4.jpg";
+import other5 from "../../assets/gallery/other5.jpg";
+import launge from "../../assets/gallery/launge.jpg";
 
 const images = [
-  "https://picsum.photos/200/300",
-  "https://picsum.photos/300/300",
-  "https://picsum.photos/3000/3000",
-  "https://picsum.photos/3000/3000",
-  "https://picsum.photos/300/500",
-  "https://picsum.photos/3000/3000",
-  "https://picsum.photos/300/300",
-  "https://picsum.photos/300/300",
+  lux1,
+  twin2,
+  stand1,
+  lux2,
+  twin3,
+  stand2,
+  bar1,
+  bar5,
+  bar2,
+  bar3,
+  bar4,
+  food1,
+  food3,
+  food4,
+  food5,
+  food7,
+  food8,
+  other1,
+  other2,
+  other3,
+  other4,
+  other5,
+  launge,
 ];
 
 const index = () => {
@@ -96,27 +134,101 @@ const index = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Grid item justifyContent="center" sx={{ margin: 10 }}>
-          <Typography align="center" variant="h4" className="gallery-text">
+        <Grid item justifyContent="center" sx={{ margin: 5 }}>
+          <Typography align="center" variant="h2" className="gallery-text">
             Get A Glimpse Of Our Exquisite Hotel
           </Typography>
         </Grid>
       </Grid>
       <div style={{ padding: "20px" }}>
+        <Typography align="center" variant="h3" className="gallery-text">
+          The Rooms
+        </Typography>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter="20px">
-            {images.map((image, i) => (
-              <LazyLoad offset={100}>
-                <img
-                  key={i}
-                  src={image}
-                  style={{ width: "100%", display: "block" }}
-                  alt=""
-                  onClick={() => viewImage(image, i)}
-                  loading="lazy"
-                />
-              </LazyLoad>
-            ))}
+            {images.map((image, i) => {
+              return i <= 5 ? (
+                <LazyLoad offset={100}>
+                  <img
+                    key={i}
+                    src={image}
+                    style={{ width: "100%", display: "block" }}
+                    alt=""
+                    onClick={() => viewImage(image, i)}
+                    loading="lazy"
+                  />
+                </LazyLoad>
+              ) : null;
+            })}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+      <div style={{ padding: "20px" }}>
+        <Typography align="center" variant="h3" className="gallery-text">
+          Foods & Drinks
+        </Typography>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="20px">
+            {images.map((image, i) => {
+              return 10 < i && i <= 16 ? (
+                <LazyLoad offset={100}>
+                  <img
+                    key={i}
+                    src={image}
+                    style={{ width: "100%", display: "block" }}
+                    alt=""
+                    onClick={() => viewImage(image, i)}
+                    loading="lazy"
+                  />
+                </LazyLoad>
+              ) : null;
+            })}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+      <div style={{ padding: "20px" }}>
+        <Typography align="center" variant="h3" className="gallery-text">
+          Some Other Places
+        </Typography>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="20px">
+            {images.map((image, i) => {
+              return 16 < i && i <= 22 ? (
+                <LazyLoad offset={100}>
+                  <img
+                    key={i}
+                    src={image}
+                    style={{ width: "100%", display: "block" }}
+                    alt=""
+                    onClick={() => viewImage(image, i)}
+                    loading="lazy"
+                  />
+                </LazyLoad>
+              ) : null;
+            })}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+      <div style={{ padding: "20px" }}>
+        <Typography align="center" variant="h3" className="gallery-text">
+          Our Bar
+        </Typography>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="20px">
+            {images.map((image, i) => {
+              return 5 < i && i <= 10 ? (
+                <LazyLoad offset={100}>
+                  <img
+                    key={i}
+                    src={image}
+                    style={{ width: "100%", display: "block" }}
+                    alt=""
+                    onClick={() => viewImage(image, i)}
+                    loading="lazy"
+                  />
+                </LazyLoad>
+              ) : null;
+            })}
           </Masonry>
         </ResponsiveMasonry>
       </div>
