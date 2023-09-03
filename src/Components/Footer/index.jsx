@@ -33,7 +33,7 @@ export default function Footer() {
       <Container maxWidth="lg">
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4}>
-            <Link to="/about" style={{textDecoration:'none'}}>
+            <Link to="/about" style={{ textDecoration: "none" }}>
               <Typography
                 variant="h6"
                 color="text.primary"
@@ -55,15 +55,15 @@ export default function Footer() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
-          <Link to="/contact" style={{textDecoration:'none'}}>
-            <Typography
-              variant="h6"
-              color="text.primary"
-              gutterBottom
-              sx={{ color: "#fff", fontWeight: "bold" }}
-            >
-              Contact Us
-            </Typography>
+            <Link to="/contact" style={{ textDecoration: "none" }}>
+              <Typography
+                variant="h6"
+                color="text.primary"
+                gutterBottom
+                sx={{ color: "#fff", fontWeight: "bold" }}
+              >
+                Contact Us
+              </Typography>
             </Link>
             <Typography
               variant="body2"
@@ -183,7 +183,7 @@ export default function Footer() {
             </a>
             {" & "}
             <a
-              href="https://www.linkedin.com/in/dawit-sishu-309ab1241/"
+              href="https://www.linkedin.com/in/efrata-tamirat-967a1624b/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
