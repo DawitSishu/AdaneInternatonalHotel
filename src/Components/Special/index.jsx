@@ -3,7 +3,6 @@ import { Grid, Typography } from "@mui/material";
 import image from "../../assets/offers/special.jpg";
 import "./style.css";
 import { Card, CardContent, CardMedia } from "@mui/material";
-import h from "../../assets/offers/special.jpg";
 import honeymoon from "../../assets/offers/honeymoon.jpg";
 import anniversary from "../../assets/offers/aniverary.jpg";
 import wedding from "../../assets/offers/wedding.jpg";

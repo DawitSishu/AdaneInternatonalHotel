@@ -9,8 +9,8 @@ import {
 import React, { useEffect } from "react";
 import "./style.css";
 import image from "../../assets/h.jpg";
-import anniversary from "../../assets/aniverary.jpg";
-import honeymoon from "../../assets/honeymoon.jpg";
+import anniversary from "../../assets/offers/aniverary.jpg";
+import honeymoon from "../../assets/offers/honeymoon.jpg";
 import { FaPlus } from "react-icons/fa";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
@@ -21,6 +21,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
+import wedding from "../../assets/offers/wedding.jpg";
+import servemain from "../../assets/services/servemain.jpg";
+import bar from "../../assets/services/bar.jpg";
+import launge from "../../assets/gallery/launge.jpg";
 
 const darkTheme = createTheme({
   palette: {
@@ -114,7 +118,7 @@ const index = () => {
               <Box className="box-container">
                 <LazyLoad height={200} offset={100}>
                   <img
-                    src={image}
+                    src={wedding}
                     alt="Your Image"
                     className="box-image"
                     loading="lazy"
@@ -367,7 +371,22 @@ const index = () => {
                 <Box className="box-container">
                   <LazyLoad height={200} offset={100}>
                     <img
-                      src={image}
+                      src={servemain}
+                      alt="Your Image"
+                      className="box-image"
+                      loading="lazy"
+                    />
+                  </LazyLoad>
+                  <div className="box-overlay">
+                    <div className="box-text">Resturant</div>
+                  </div>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Box className="box-container">
+                  <LazyLoad height={200} offset={100}>
+                    <img
+                      src={launge}
                       alt="Your Image"
                       className="box-image"
                       loading="lazy"
@@ -382,7 +401,7 @@ const index = () => {
                 <Box className="box-container">
                   <LazyLoad height={200} offset={100}>
                     <img
-                      src={image}
+                      src={bar}
                       alt="Your Image"
                       className="box-image"
                       loading="lazy"
@@ -390,21 +409,6 @@ const index = () => {
                   </LazyLoad>
                   <div className="box-overlay">
                     <div className="box-text">Bar</div>
-                  </div>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <Box className="box-container">
-                  <LazyLoad height={200} offset={100}>
-                    <img
-                      src={image}
-                      alt="Your Image"
-                      className="box-image"
-                      loading="lazy"
-                    />
-                  </LazyLoad>
-                  <div className="box-overlay">
-                    <div className="box-text">Resturant</div>
                   </div>
                 </Box>
               </Grid>
@@ -452,17 +456,15 @@ const index = () => {
               sx={{ height: "60vh", paddingRight: 2 }}
             >
               <Box sx={{ width: "100%", height: "100%" }} className="home-map">
-                <LazyLoad height={200} offset={100}>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.958406780044!2d41.84623727511885!3d9.598849990487015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631018ef6cf08e7%3A0xd8cdd0828ca57800!2z4Yqg4Yuz4YqQIOGIhuGJtOGIjSBIb3RlbCBBZGFuZQ!5e0!3m2!1sen!2set!4v1689189837125!5m2!1sen!2set&maptype=dark"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, filter: "invert(90%)" }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </LazyLoad>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.958406780044!2d41.84623727511885!3d9.598849990487015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631018ef6cf08e7%3A0xd8cdd0828ca57800!2z4Yqg4Yuz4YqQIOGIhuGJtOGIjSBIb3RlbCBBZGFuZQ!5e0!3m2!1sen!2set!4v1689189837125!5m2!1sen!2set&maptype=dark"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: "invert(90%)" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </Box>
             </Grid>
 
