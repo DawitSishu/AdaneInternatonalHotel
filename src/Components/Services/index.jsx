@@ -61,7 +61,6 @@ const roomData = [
       "Study Desk",
       "Multi channel television system",
       "Acces to high speed WiFi internet",
-      "Individual controlled air conditionings",
     ],
   },
   {
@@ -75,7 +74,6 @@ const roomData = [
       "Study Desk",
       "Multi channel television system",
       "Acces to high speed WiFi internet",
-      "Individual controlled air conditionings",
     ],
   },
   {
@@ -89,7 +87,6 @@ const roomData = [
       "Study Desk",
       "Multi channel television system",
       "Acces to high speed WiFi internet",
-      "Individual controlled air conditionings",
     ],
   },
 ];

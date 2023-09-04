@@ -6,7 +6,7 @@ import Loader from "../Loader";
 import { DefaultPlayer as Video } from "react-html5video";
 import "react-html5video/dist/styles.css";
 import vid from "../../assets/homevid.mp4";
-import thumbnail from "../../assets/o.png";
+import thumbnail from "../../assets/o.jpg";
 import { FaTimes, FaPlay } from "react-icons/fa";
 import Footer from "../Footer";
 import NavBar from "../Navbar";
@@ -77,7 +77,7 @@ const index = () => {
       <Suspense fallback={<Loader />}>
         <div className="images">
           <div className="main-title">
-            <h1 style={{ marginTop: "3px" }}>Welcome</h1>
+            <h1 style={{ marginTop: "5px" }}>Welcome</h1>
             <br />
             <h1>To</h1>
             <br />
