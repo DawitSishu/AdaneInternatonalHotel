@@ -14,6 +14,7 @@ import hotelmain from "../../assets/about/hotelMain.jpg";
 import img1 from "../../assets/about/1.jpg";
 import img2 from "../../assets/about/about1.jpg";
 import img3 from "../../assets/about/about2.jpg";
+import message from "../../assets/about/message.jpg";
 
 const index = () => {
   const tl = useRef();
@@ -175,10 +176,10 @@ const index = () => {
       </Suspense>
       <Grid container justifyContent="center">
         <Typography variant="h3" align="center" className="about-text-title">
-          A Message From The Manager
+          A Message From The Owner
         </Typography>
         <img
-          src={hotelmain}
+          src={message}
           alt="logp"
           style={{ width: "75%", height: "80%", margin: "15px" }}
           loading="lazy"
