@@ -33,14 +33,15 @@ const ContactForm = () => {
         }
         try {
 
-         const response = await emailjs.send("service_go8gr4u","template_iy26d4b",{
+         const response = await emailjs.send("service_bb4huiw","template_m9uic57",{
             name: data.name,
             email: data.email,
             message: data.message,
-            },'sbZ4_ZBdtoGSG8K_K');
-            alert(response);
+            },'YF7-rfkKbZVPRLUSx');
+            alert("message uccessfully sent!");
         } catch (error) {
-         alert(error)
+        //  alert(error)
+        console.log(error);
       }
     }
 

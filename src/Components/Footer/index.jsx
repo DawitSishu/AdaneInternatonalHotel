@@ -77,7 +77,7 @@ export default function Footer() {
               color="text.secondary"
               sx={{ color: "#fff" }}
             >
-              Email: info@example.com
+              Email: adaneinternationalhotel@gmail.com
             </Typography>
             <Typography
               variant="body2"
