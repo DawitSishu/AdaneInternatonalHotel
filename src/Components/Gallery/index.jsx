@@ -32,6 +32,13 @@ import other3 from "../../assets/gallery/other3.jpg";
 import other4 from "../../assets/gallery/other4.jpg";
 import other5 from "../../assets/gallery/other5.jpg";
 import launge from "../../assets/gallery/launge.jpg";
+import space1 from "../../assets/gallery/space1.jpg";
+import space2 from "../../assets/gallery/space2.jpg";
+import space3 from "../../assets/gallery/space3.jpg";
+import space4 from "../../assets/gallery/space4.jpg";
+import space5 from "../../assets/gallery/space5.jpg";
+import space6 from "../../assets/gallery/space6.jpg";
+import { SpaceBarRounded } from "@mui/icons-material";
 
 const images = [
   lux1,
@@ -57,6 +64,12 @@ const images = [
   other4,
   other5,
   launge,
+  space1,
+  space2,
+  space3,
+  space4,
+  space5,
+  space6,
 ];
 
 const index = () => {
@@ -211,7 +224,31 @@ const index = () => {
       </div>
       <div style={{ padding: "20px" }}>
         <Typography align="center" variant="h3" className="gallery-text">
-          Our Bar
+          Our Gardenary For Events
+        </Typography>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="20px">
+            {images.map((image, i) => {
+              return 22 < i && i <= 28 ? (
+                <LazyLoad offset={100} key={i}>
+                  <img
+                    key={i}
+                    src={image}
+                    style={{ width: "100%", display: "block" }}
+                    alt=""
+                    onClick={() => viewImage(image, i)}
+                    loading="lazy"
+                  />
+                </LazyLoad>
+              ) : null;
+            })}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+
+      <div style={{ padding: "20px" }}>
+        <Typography align="center" variant="h3" className="gallery-text">
+          Lobby Bar
         </Typography>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter="20px">

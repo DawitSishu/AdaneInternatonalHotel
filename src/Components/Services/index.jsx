@@ -58,9 +58,12 @@ const roomData = [
     title: "Luxurious Suite",
     features: [
       "24 hour room service",
+      "Breakfast Services",
       "Study Desk",
       "Multi channel television system",
       "Acces to high speed WiFi internet",
+      "luxurious Shower with Seam and bath-hub",
+      "Living Room with Comfortable Sofas",
     ],
   },
   {
@@ -71,9 +74,11 @@ const roomData = [
     title: "TWIN BED",
     features: [
       "24 hour room service",
+      "Breakfast Services",
       "Study Desk",
       "Multi channel television system",
       "Acces to high speed WiFi internet",
+      "2 Beds",
     ],
   },
   {
@@ -84,6 +89,7 @@ const roomData = [
     title: "STANDARD ROOM",
     features: [
       "24 hour room service",
+      "Breakfast Services",
       "Study Desk",
       "Multi channel television system",
       "Acces to high speed WiFi internet",

@@ -84,7 +84,7 @@ export default function Footer() {
               color="text.secondary"
               sx={{ color: "#fff" }}
             >
-              Phone: +251-9-486-715-61
+              Phone: 025-411-94-95
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
